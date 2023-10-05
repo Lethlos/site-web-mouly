@@ -60,3 +60,9 @@ function slidePrev(){
     let decal = -slideWidth * compteur;
     elements.style.transform = `translateX(${decal}px)`;
 }
+
+// Mise en oeuvre du "responsive"
+window.addEventListener("resize", () => {
+    slideWidth = diapo.getBoundingClientRect().width;
+    slideNext();
+})

@@ -160,6 +160,7 @@ a:active {
 .diapo{
     position: relative;
     overflow: hidden;
+	width: 50%;
 }
 
 #nav-droite, #nav-gauche{
@@ -180,6 +181,7 @@ a:active {
 .elements{
     display: flex;
     transition: 1s linear;
+	width: 100%;
 }
 
 .element{
@@ -188,5 +190,6 @@ a:active {
 }
 
 .element > img{
-    width: 100%;
+    width: 99%;
+	margin:0%;
 }
