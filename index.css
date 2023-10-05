@@ -1,0 +1,115 @@
+:root {
+	--main-color: #91000b;
+	--secondary-color: #d9d9d9;
+}
+
+.header-title {
+	margin: 0;
+	background-color : var(--main-color);
+	color : #FFFFFF;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content : space-between;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.header-menu {
+	margin: 0;
+	background-color : var(--secondary-color);
+	color : #000000;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content : space-between;
+	align-items: center;
+	flex-direction: row;
+	padding: 1%;
+	
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+
+footer {
+ margin-top: 2%;
+  width : 100%; /* obligatoire si la largeur du footer n'est pas spécifiée explicitement dans le code CSS */
+  height : 6em;
+  background : var(--main-color);
+  color : #FFFFFF;
+  
+  display: flex;
+  flex-direction: row;
+	align-items: center;
+	justify-content : space-around;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.ancres {scroll-margin-top: 200px;}
+
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+	align-items: center;
+	justify-content : space-around;
+	padding-left: 1%;
+	padding-right: 1%;
+	width:100%;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+	align-items: right;
+	justify-content : space_between;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.flex_division {
+  display: flex;
+  flex-direction: row;
+	align-items: stretch;
+	justify-content : space-between;
+	padding-left: 1%;
+	padding-right: 1%;
+	flex-wrap: wrap;
+}
+
+
+h2 {
+
+    color: var(--main-color); 
+	background-color : #000000;
+}
+
+.carroussel {
+	text-align: center;
+}
+
+.white {
+	color: white;
+}
+
+.align_center {
+	text-align: center;
+	padding : 2%;
+}
+
+button {
+	margin-right: 2%;
+}
+
+
+body h1 {
+	color : var(--main-color); 
+}
+
+.element-separator {
+	font-size: 150%;
+}
