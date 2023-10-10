@@ -1,0 +1,126 @@
+<! Doctype html>
+<html>
+
+	<head>
+		<title>Gite de Figuiès</title>
+		<link rel="stylesheet" href="index.css">
+		
+	</head>
+	
+	<body>
+		<header class = "header">
+			<div class = "header-title">
+				<img class="logo" src="img/LOGO-figuies.png" height=100px/>
+				<h1 class="white"> GITE DE FIGUIES </h1>
+				<button id="login">Sign out</button>
+			</div>
+		</header>
+		<h1 id="Photos" class="ancres"> Photos</h1>
+		<!-- Conteneur principal de tout le diaporama -->
+		<div class="flex_division">
+			<div> </div>
+			<div class="diapo">
+				<!-- Conteneur des "diapos" -->
+				<div class="elements">
+					<!-- Première diapo -->
+					<div class="element active">
+						<img src="img/GoogleMap.png" alt="Image 1">
+					</div>
+					<!-- Deuxième diapo -->
+					<div class="element">
+						<img src="img/figuies1.jpg" alt="Image 2">
+					</div>
+					<!-- Troisième diapo -->
+					<div class="element">
+						<img src="img/sourire.jpg" alt="Image 3">
+					</div>
+				</div>
+				<!-- Flèches de navigation -->
+				<i id="nav-gauche" class="las la-chevron-left"><img src="img/arrow.png" alt="←" width="60px"></i>
+				<i id="nav-droite" class="las la-chevron-right"><img src="img/arrow.png" alt="→" width="60px" reversed></i>
+			</div>
+			<div> </div>
+		</div>
+		<form action="/ma-page-de-traitement" method="post">
+			<textarea id="msg" name="user_message">
+				Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.
+			</textarea>
+		
+			<div class="flex_division">
+				<div class="flex_col">
+					<div>
+						<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
+						<ul>
+						<li> service 1 </li>
+						<li> service 2 </li>
+						<li> service 3 </li>
+						<li> service 4 </li>
+						</ul>
+					</div>
+					<div>
+					<h1 id="Capacité" class="ancres"> Capacités </h1>
+					<div class="flex_row">
+					<span>
+						<label for="Lit">Lit :</label>
+						<input type="number" id="Lit" name="nb_lit" value="4"/>
+					</span>
+					<span>
+						<label for="Place">Place :</label>
+						<input type="number" id="Place" name="nb_place" value="2"/>
+					</span>
+					<span>
+						<label for="Chambre">Chambre :</label>
+						<input type="number" id="Chambre" name="nb_Chambre" value="6"/>
+					</span>
+					</div>
+					<h1> Tarifs </h1>
+					<span>
+						<label for="Lit">Semaine moyenne saison à </label>
+						<input type="number" id="Lit" name="nb_lit" value="550"/>€
+					</span></br>
+					<span>
+						<label for="Place">Nuitée Moyenne saison à </label>
+						<input type="number" id="Place" name="nb_place" value="85"/>€
+					</span></br>
+					<span>
+						<label for="Chambre">Semaine haute saison à </label>
+						<input type="number" id="Chambre" name="nb_Chambre" value="650"/>€
+					</span></br>
+					<span>
+						<label for="Chambre">Nuitée haute saison à </label>
+						<input type="number" id="Chambre" name="nb_Chambre" value="110"/>€
+					</span></br>
+					<h1> Moyen de paiement </h1>
+					<ul>
+						<li> Cheque </li>
+						<li> Espece </li>
+						<li> Virement </li>
+					</ul>
+					<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
+					<img src="img/DisponibiliteTODO.png"/>
+				</div>
+				</div>
+				<div>
+					<h1 id="Localisation" class="ancres"> Localisation </h1>
+					<div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45571.61785354719!2d2.4521229965790443!3d44.4490344683737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b28229b9ad4bb3%3A0x53e8b9991335fc4d!2s140%20Figuies%2C%2012330%20Salles-la-Source!5e0!3m2!1sfr!2sfr!4v1696322224607!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+					<div class="align_center"> Adresse : 140 rue de Figuiès, 12330 Salles-la-Source </div>
+				</div>
+			</div>
+		</form>	‎
+		<footer>
+			<h1 id="Contact" class="white"> Contact : </h1>
+			<div>
+				<h3> Tel : 05 65 76 89 01</h3>
+				<h3> mail :  gitefigiues@gmail.com</h3>
+			</div>
+			
+			<div> <img src="img/facebook.png" width="40px" height="40px"/> mon facebook</div>
+			<div> <img src="img/twitter.png" width="40px" height="40px"/> @monTwitter</div>
+			<div> <img src="img/instagram.png" width="40px" height="40px"/> @monInsta</div>
+			
+		</footer>
+
+<script src="index2.js"></script>
+	</body>
+	
+</html>
