@@ -1,11 +1,12 @@
 :root {
-	--main-color: #80A264 ;
+	--main-color: #559655;
+	--header-color: #9abd6f;
 	--secondary-color: #d9d9d9;
 }
 
 .header-title {
 	margin: 0;
-	background-color : var(--main-color);
+	background-color : var(--header-color);
 	color : #FFFFFF;
 	display: flex;
 	flex-direction: row;
@@ -33,17 +34,35 @@
 .header {
 	position: sticky;
 	top: 0;
-	width: 100%;
+	width: 100dw;
 	z-index:1000;
 }
 
+.content{
+	width: 80%;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-items: right;
+	justify-content : space_between;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin: 0;
+}
+
+body{
+	background-color: #f0f0f0;
+	background-image:url('./img/background2.webp');
+	background-size: 100dw;
+	margin: 0;
+}
 
 
 footer {
- margin-top: 2%;
-  width : 100%; /* obligatoire si la largeur du footer n'est pas spécifiée explicitement dans le code CSS */
+  margin: 0;
+  width : 100dw; /* obligatoire si la largeur du footer n'est pas spécifiée explicitement dans le code CSS */
   height : 6em;
-  background : var(--main-color);
+  background : var(--header-color);
   color : #FFFFFF;
   
   display: flex;
@@ -86,6 +105,16 @@ footer {
 	flex-wrap: wrap;
 }
 
+.flex_row_center {
+  display: flex;
+  flex-direction: row;
+	align-items: center;
+	justify-content : center;
+	padding-left: 1%;
+	padding-right: 1%;
+	width:100dw;
+}
+
 
 h2 {
 
@@ -113,8 +142,10 @@ button {
 
 
 body h1 {
-	color : var(--main-color); 
+	color : var(--main-color);
 }
+
+
 
 .element-separator {
 	font-size: 150%;
