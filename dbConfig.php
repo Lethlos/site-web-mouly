@@ -2,8 +2,8 @@
 // Database configuration  
 $dbHost     = "localhost";  
 $dbUsername = "root";  
-$dbPassword = "root";  
-$dbName     = "codexworld_db";  
+$dbPassword = "";  
+$dbName     = "gite";  
   
 // Create database connection  
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);  
