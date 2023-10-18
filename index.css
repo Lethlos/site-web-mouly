@@ -2,6 +2,7 @@
 	--main-color: #559655;
 	--header-color: #9abd6f;
 	--secondary-color: #d9d9d9;
+	font-family: 'Shantell Sans', cursive;
 }
 
 .header-title {
@@ -134,6 +135,8 @@ h2 {
 
 .white {
 	color: white;
+	font-family: 'Nothing You Could Do', cursive;
+	font-size: 40;
 }
 
 .align_center {
@@ -149,6 +152,7 @@ button {
 
 body h1 {
 	color : var(--main-color);
+	font-family: 'Ubuntu', sans-serif;
 }
 
 
