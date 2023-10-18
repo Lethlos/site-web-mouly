@@ -180,21 +180,21 @@ a:visited {
 }
 
 a:focus {
-  background: #999999;
+  background: var(--header-color);
   outline: none;
   text-decoration: none;
   color: #e6e6e6;
 }
 
 a:hover {
-  background: #999999;
+  background: var(--header-color);
   outline: none;
   text-decoration: none;
   color: #e6e6e6;
 }
 
 a:active {
-  background: #265301;
+  background: #999999;
   color: #000000;
   outline: none;
   text-decoration: none;
