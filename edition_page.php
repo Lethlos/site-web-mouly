@@ -29,7 +29,6 @@
 				<input type="file" name="image">
 				<input type="submit" name="submit" value="Upload">
 			</form>
-		<form action="/ma-page-de-traitement" method="post">
 			<h1 id="Photos" class="ancres"> Photos</h1>
 			<!-- Conteneur principal de tout le diaporama -->
 			<div class="flex_division_diapo">
@@ -37,18 +36,9 @@
 				<div class="diapo">
 					<!-- Conteneur des "diapos" -->
 					<div class="elements">
-						<!-- Première diapo -->
-						<div class="element active">
-							<img src="img/GoogleMap.png" alt="Image 1">
-						</div>
-						<!-- Deuxième diapo -->
-						<div class="element">
-							<img src="img/figuies1.jpg" alt="Image 2">
-						</div>
-						<!-- Troisième diapo -->
-						<div class="element">
-							<img src="img/sourire.jpg" alt="Image 3">
-						</div>
+						<?php 
+						include 'view.php';
+						?>
 					</div>
 					<!-- Flèches de navigation -->
 					<i id="nav-gauche" class="las la-chevron-left"><img src="img/arrow.png" alt="←" width="60px"></i>
@@ -56,6 +46,7 @@
 				</div>
 				<div> </div>
 			</div>
+		<form action="/ma-page-de-traitement" method="post">
 			<textarea id="msg" name="user_message">
 				Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.
 			</textarea>
