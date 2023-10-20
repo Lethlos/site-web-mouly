@@ -5,6 +5,7 @@
 		<title>Gite de Figuiès</title>
 		<link rel="stylesheet" href="normelize.css">
 		<link rel="stylesheet" href="index.css">
+		<script src="edition_page.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +42,8 @@
 						?>
 					</div>
 					<!-- Flèches de navigation -->
-					<i id="nav-gauche" class="las la-chevron-left"><img src="img/arrow.png" alt="←" width="60px"></i>
-					<i id="nav-droite" class="las la-chevron-right"><img src="img/arrow.png" alt="→" width="60px" reversed></i>
+					<i id="nav-gauche" class="las la-chevron-left"><img src="img/arrow.png" alt="←" width="40px"></i>
+					<i id="nav-droite" class="las la-chevron-right"><img src="img/arrow.png" alt="→" width="40px" reversed></i>
 				</div>
 				<div> </div>
 			</div>
@@ -78,15 +79,15 @@
 				<div class="flex_row">
 					<span>
 						<label for="Lit">Lit :</label>
-						<input type="number" id="Lit" name="nb_lit" value="4"/>
+						<input type="number" id="inputBed" name="inputBed" value="4"/>
 					</span>
 					<span>
 						<label for="Place">Place :</label>
-						<input type="number" id="Place" name="nb_place" value="2"/>
+						<input type="number" id="inputPlace" name="inputPlace" value="2"/>
 					</span>
 					<span>
 						<label for="Chambre">Chambre :</label>
-						<input type="number" id="Chambre" name="nb_Chambre" value="6"/>
+						<input type="number" id="inputRoom" name="inputRoom" value="6"/>
 					</span>
 					<span></span>
 					<span></span>
@@ -96,20 +97,20 @@
 				<h1> Tarifs </h1>
 				<div class="flex_col">
 					<span>
-						<label for="Lit">Semaine moyenne saison à </label>
-						<input type="number" id="Lit" name="nb_lit" value="550"/> €
+						<label for="inputPriceWeek">Semaine moyenne saison à </label>
+						<input type="number" id="inputPriceWeek" name="inputPriceWeek" value="550"/> €
 					</span></br>
 					<span>
-						<label for="Place">Nuitée Moyenne saison à </label>
-						<input type="number" id="Place" name="nb_place" value="85"/> €
+						<label for="inputPriceNight">Nuitée Moyenne saison à </label>
+						<input type="number" id="inputPriceNight" name="inputPriceNight" value="85"/> €
 					</span></br>
 					<span>
-						<label for="Chambre">Semaine haute saison à </label>
-						<input type="number" id="Chambre" name="nb_Chambre" value="650"/> €
+						<label for="inputPriceHighWeek">Semaine haute saison à </label>
+						<input type="number" id="inputPriceHighWeek" name="inputPriceHighWeek" value="650"/> €
 					</span></br>
 					<span>
-						<label for="Chambre">Nuitée haute saison à </label>
-						<input type="number" id="Chambre" name="nb_Chambre" value="110"/> €
+						<label for="inputPriceHighNight">Nuitée haute saison à </label>
+						<input type="number" id="inputPriceHighNight" name="inputPriceHighNight" value="110"/> €
 					</span></br>
 				</div>
 				<h1> Moyen de paiement </h1>
@@ -131,16 +132,17 @@
 				<h1> Localisation </h1>
 				<div class="flex_col">
 					<span>
-						<label for="Adresse">Adresse </label>
-						<input type="text" id="Adresse" name="Adresse" value="140 rue de Figuiès"/>
+						<label for="inputAdress">Adresse </label>
+						<input type="text" id="inputAdress" name="inputAdress" value="140 rue de Figuiès"/>
+					</span></br>
+					<span >
+						<label for="inputCP">Code Postal </label>
+						<input type="number" id="inputCP" name="inputCP" value="12330"/>
+						<span id="errInputCP" class="errMessage"></span>
 					</span></br>
 					<span>
-						<label for="CP">Code Postal </label>
-						<input type="number" id="CP" name="CP" value="12330"/>
-					</span></br>
-					<span>
-						<label for="Ville">Ville </label>
-						<input type="text" id="Ville" name="Ville" value="Salles-la-Source"/>
+						<label for="inputCity">Ville </label>
+						<input type="text" id="inputCity" name="inputCity" value="Salles-la-Source"/>
 					</span></br>
 				</div>
 				
@@ -150,8 +152,9 @@
 				<h1> Contact </h1>
 				<div class="flex_col">
 					<span>
-						<label for="Lit">Tel </label>
-						<input type="text" id="Lit" name="nb_lit" value="05 65 76 89 01"/>
+						<label for="inputNumTel">Tel </label>
+						<input type="text" id="inputNumTel" name="inputNumTel" value="05 65 76 89 01"/>
+						<span id="errInputNumTel" class="errMessage"></span>
 					</span></br>
 					<span>
 						<label for="Place">Mail</label>

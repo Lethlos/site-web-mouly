@@ -210,7 +210,6 @@ a:active {
 #nav-droite, #nav-gauche{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     color: white;
     font-size: 3em;
 }
@@ -269,4 +268,9 @@ textarea {
 
 input {
 	width: 50px;
+}
+
+.errMessage {
+	color: red;
+	font-size: 90%;
 }
