@@ -47,7 +47,7 @@
 				</div>
 				<div> </div>
 			</div>
-		<form action="/ma-page-de-traitement" method="post">
+		<form action="page_save.php" method="post">
 			<textarea id="msg" name="user_message">
 				Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.
 			</textarea>
@@ -74,106 +74,108 @@
 					<label for="serv5">service 5</label>
 				</span>
 			</div>
+			<h1 id="Capacity" class="ancres"> Capacités </h1>
+			<div class="flex_row capacityDiv">
+				<span>
+					<label for="inputBed">Lit :</label>
+					<input type="number" id="inputBed" name="inputBed" value="4"/>
+				</span>
+				<span>
+					<label for="inputPlace">Place :</label>
+					<input type="number" id="inputPlace" name="inputPlace" value="2"/>
+				</span>
+				<span>
+					<label for="inputRoom">Chambre :</label>
+					<input type="number" id="inputRoom" name="inputRoom" value="6"/>
+				</span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			
+			<h1> Tarifs </h1>
+			<div class="flex_col rateDiv">
+				<span>
+					<label for="inputPriceWeek">Semaine moyenne saison à </label>
+					<input type="number" id="inputPriceWeek" name="inputPriceWeek" value="550"/> €
+				</span></br>
+				<span>
+					<label for="inputPriceNight">Nuitée Moyenne saison à </label>
+					<input type="number" id="inputPriceNight" name="inputPriceNight" value="85"/> €
+				</span></br>
+				<span>
+					<label for="inputPriceHighWeek">Semaine haute saison à </label>
+					<input type="number" id="inputPriceHighWeek" name="inputPriceHighWeek" value="650"/> €
+				</span></br>
+				<span>
+					<label for="inputPriceHighNight">Nuitée haute saison à </label>
+					<input type="number" id="inputPriceHighNight" name="inputPriceHighNight" value="110"/> €
+				</span></br>
+			</div>
+			<h1> Moyen de paiement </h1>
+			<div class="flex_col">
+				<span>
+					<input type="checkbox" id="Espece_accepte" name="Espece_accepte" checked />
+					<label for="Espece_accepte">Espece</label>
+				</span>
+				<span>
+					<input type="checkbox" id="Cheque_accepte" name="Cheque_accepte" checked />
+					<label for="Cheque_accepte">Cheque</label>	
+				</span>
+				<span>
+					<input type="checkbox" id="Virement_accepte" name="Virement_accepte" checked />
+					<label for="Virement_accepte">Virement</label>
+				</span>
+			</div>
+			
+			<h1> Localisation </h1>
+			<div class="flex_col localisationDiv">
+				<span>
+					<label for="inputAdress">Adresse </label>
+					<input type="text" id="inputAdress" name="inputAdress" value="140 rue de Figuiès"/>
+				</span></br>
+				<span >
+					<label for="inputCP">Code Postal </label>
+					<input type="number" id="inputCP" name="inputCP" value="12330"/>
+					<span id="errInputCP" class="errMessage"></span>
+				</span></br>
+				<span>
+					<label for="inputCity">Ville </label>
+					<input type="text" id="inputCity" name="inputCity" value="Salles-la-Source"/>
+				</span></br>
+			</div>
+			
+			<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
+			<img src="img/DisponibiliteTODO.png"/>
+			
+			<h1> Contact </h1>
+			<div class="flex_col contactDiv">
+				<span>
+					<label for="inputNumTel">Tel </label>
+					<input type="text" id="inputNumTel" name="inputNumTel" value="05 65 76 89 01"/>
+					<span id="errInputNumTel" class="errMessage"></span>
+				</span></br>
+				<span>
+					<label for="inputMail">Mail</label>
+					<input type="text" id="inputMail" name="inputMail" value="gitefigiues@gmail.com"/>
+					<span id="errInputMail" class="errMessage"></span>
+				</span></br>
+				<span>
+					<label for="inputFacebook">Facebook </label>
+					<input type="text" id="inputFacebook" name="inputFacebook" value="monFacebook"/>
+					<span id="errInputFacebook" class="errMessage"></span>
+				</span></br>
+				<span>
+					<label for="inputX">X </label>
+					<input type="text" id="inputX" name="inputX" value="@monTwitter"/>
+				</span></br>
+				<span>
+					<label for="inputInsta">Instagram </label>
+					<input type="text" id="inputInsta" name="inputInsta" value="@monInsta"/>
+				</span></br>
+			</div>
 			<div>
-				<h1 id="Capacité" class="ancres"> Capacités </h1>
-				<div class="flex_row capacityDiv">
-					<span>
-						<label for="Lit">Lit :</label>
-						<input type="number" id="inputBed" name="inputBed" value="4"/>
-					</span>
-					<span>
-						<label for="Place">Place :</label>
-						<input type="number" id="inputPlace" name="inputPlace" value="2"/>
-					</span>
-					<span>
-						<label for="Chambre">Chambre :</label>
-						<input type="number" id="inputRoom" name="inputRoom" value="6"/>
-					</span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				
-				<h1> Tarifs </h1>
-				<div class="flex_col rateDiv">
-					<span>
-						<label for="inputPriceWeek">Semaine moyenne saison à </label>
-						<input type="number" id="inputPriceWeek" name="inputPriceWeek" value="550"/> €
-					</span></br>
-					<span>
-						<label for="inputPriceNight">Nuitée Moyenne saison à </label>
-						<input type="number" id="inputPriceNight" name="inputPriceNight" value="85"/> €
-					</span></br>
-					<span>
-						<label for="inputPriceHighWeek">Semaine haute saison à </label>
-						<input type="number" id="inputPriceHighWeek" name="inputPriceHighWeek" value="650"/> €
-					</span></br>
-					<span>
-						<label for="inputPriceHighNight">Nuitée haute saison à </label>
-						<input type="number" id="inputPriceHighNight" name="inputPriceHighNight" value="110"/> €
-					</span></br>
-				</div>
-				<h1> Moyen de paiement </h1>
-				<div class="flex_col">
-					<span>
-						<input type="checkbox" id="Espece_accepte" name="Espece_accepte" checked />
-						<label for="Espece_accepte">Espece</label>
-					</span>
-					<span>
-						<input type="checkbox" id="Cheque_accepte" name="Cheque_accepte" checked />
-						<label for="Cheque_accepte">Cheque</label>	
-					</span>
-					<span>
-						<input type="checkbox" id="Virement_accepte" name="Virement_accepte" checked />
-						<label for="Virement_accepte">Virement</label>
-					</span>
-				</div>
-				
-				<h1> Localisation </h1>
-				<div class="flex_col localisationDiv">
-					<span>
-						<label for="inputAdress">Adresse </label>
-						<input type="text" id="inputAdress" name="inputAdress" value="140 rue de Figuiès"/>
-					</span></br>
-					<span >
-						<label for="inputCP">Code Postal </label>
-						<input type="number" id="inputCP" name="inputCP" value="12330"/>
-						<span id="errInputCP" class="errMessage"></span>
-					</span></br>
-					<span>
-						<label for="inputCity">Ville </label>
-						<input type="text" id="inputCity" name="inputCity" value="Salles-la-Source"/>
-					</span></br>
-				</div>
-				
-				<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
-				<img src="img/DisponibiliteTODO.png"/>
-				
-				<h1> Contact </h1>
-				<div class="flex_col contactDiv">
-					<span>
-						<label for="inputNumTel">Tel </label>
-						<input type="text" id="inputNumTel" name="inputNumTel" value="05 65 76 89 01"/>
-						<span id="errInputNumTel" class="errMessage"></span>
-					</span></br>
-					<span>
-						<label for="Place">Mail</label>
-						<input type="text" id="Place" name="nb_place" value="gitefigiues@gmail.com"/>
-					</span></br>
-					<span>
-						<label for="inputFacebook">Facebook </label>
-						<input type="text" id="inputFacebook" name="inputFacebook" value="monFacebook"/>
-						<span id="errInputFacebook" class="errMessage"></span>
-					</span></br>
-					<span>
-						<label for="inputX">X </label>
-						<input type="text" id="inputX" name="inputX" value="@monTwitter"/>
-					</span></br>
-					<span>
-						<label for="inputInsta">Instagram </label>
-						<input type="text" id="inputInsta" name="inputInsta" value="@monInsta"/>
-					</span></br>
-				</div>
+
 			</div>
 		</form>
 		</div>
