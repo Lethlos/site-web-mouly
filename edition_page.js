@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputCP = document.getElementById("inputCP");
 
     const inputNumTel = document.getElementById("inputNumTel");
+    const inputX = document.getElementById("inputX");
+    const inputInsta = document.getElementById("inputInsta");
+    const inputFacebook = document.getElementById("inputFacebook")
 
     inputBed.addEventListener("input", justNumber);
     inputPlace.addEventListener("input", justNumber);
@@ -28,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     inputNumTel.addEventListener("input", justNumTel);
     inputNumTel.addEventListener("blur", testValidNumTel);
+    inputX.addEventListener("input", justX);
+    inputInsta.addEventListener("input", justInsta);
+    inputFacebook.addEventListener("input", justFacebook);
     
   });
 
@@ -103,6 +109,74 @@ function testValidNumTel(e) {
     const errInput = document.getElementById("errInputNumTel");
     let messageError = "";
     if(inputValue.length != 14) messageError = "* Numéro de téléphone incorrect";
+
+    errInput.textContent = messageError;
+}
+
+/**
+ * Formatte le @ X 
+ * @param {*} e 
+ */
+function justX(e) {
+
+    const input =  e.target;
+    let inputValue = input.value;
+
+    inputValue = inputValue.replace(/[^a-zA-Z0-9_]/g, "").substr(0, 16);
+
+    // Vérifier si la valeur commence par '@'
+    if (!inputValue.startsWith('@')) {
+      inputValue = '@' + inputValue;
+    }
+
+    // Mettre à jour la valeur de l'input
+    input.value = inputValue;
+  }
+
+  /**
+ * Formatte le @ Insta
+ * @param {*} e 
+ */
+function justInsta(e) {
+
+    const input =  e.target;
+    let inputValue = input.value;
+
+    inputValue = inputValue.replace(/[^a-zA-Z0-9_\.]/g, "").substr(0, 31);
+
+    // Vérifier si la valeur commence par '@'
+    if (!inputValue.startsWith('@')) {
+      inputValue = '@' + inputValue;
+    }
+
+    // Mettre à jour la valeur de l'input
+    input.value = inputValue;
+  }
+
+  /**
+ * Formatte le username Facebook 
+ * @param {*} e 
+ */
+function justFacebook(e) {
+
+    const input =  e.target;
+    let inputValue = input.value;
+
+    inputValue = inputValue.replace(/[^a-zA-Z0-9.]/g, "").substr(0, 30);
+
+    // Mettre à jour la valeur de l'input
+    input.value = inputValue;
+  }
+
+/**
+ * Affiche un message d'erreur si le username facebook n'est pas valide
+ * @param {*} e 
+ */
+function testValidFacebook(e) {
+    const inputValue = document.getElementById("inputFacebook").value;
+    const errInput = document.getElementById("errInputFacebook");
+    let messageError = "";
+    if(inputValue.length < 5 && inputValue.length > 0) messageError = "* Le userNameFacebook doit faire au moins 5 caractères";
 
     errInput.textContent = messageError;
 }

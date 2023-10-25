@@ -76,7 +76,7 @@
 			</div>
 			<div>
 				<h1 id="Capacité" class="ancres"> Capacités </h1>
-				<div class="flex_row">
+				<div class="flex_row capacityDiv">
 					<span>
 						<label for="Lit">Lit :</label>
 						<input type="number" id="inputBed" name="inputBed" value="4"/>
@@ -95,7 +95,7 @@
 				</div>
 				
 				<h1> Tarifs </h1>
-				<div class="flex_col">
+				<div class="flex_col rateDiv">
 					<span>
 						<label for="inputPriceWeek">Semaine moyenne saison à </label>
 						<input type="number" id="inputPriceWeek" name="inputPriceWeek" value="550"/> €
@@ -130,7 +130,7 @@
 				</div>
 				
 				<h1> Localisation </h1>
-				<div class="flex_col">
+				<div class="flex_col localisationDiv">
 					<span>
 						<label for="inputAdress">Adresse </label>
 						<input type="text" id="inputAdress" name="inputAdress" value="140 rue de Figuiès"/>
@@ -150,7 +150,7 @@
 				<img src="img/DisponibiliteTODO.png"/>
 				
 				<h1> Contact </h1>
-				<div class="flex_col">
+				<div class="flex_col contactDiv">
 					<span>
 						<label for="inputNumTel">Tel </label>
 						<input type="text" id="inputNumTel" name="inputNumTel" value="05 65 76 89 01"/>
@@ -161,16 +161,17 @@
 						<input type="text" id="Place" name="nb_place" value="gitefigiues@gmail.com"/>
 					</span></br>
 					<span>
-						<label for="Chambre">Facebook </label>
-						<input type="text" id="Chambre" name="nb_Chambre" value="mon facebook"/>
+						<label for="inputFacebook">Facebook </label>
+						<input type="text" id="inputFacebook" name="inputFacebook" value="monFacebook"/>
+						<span id="errInputFacebook" class="errMessage"></span>
 					</span></br>
 					<span>
-						<label for="Chambre">X </label>
-						<input type="text" id="Chambre" name="nb_Chambre" value="@monTwitter"/>
+						<label for="inputX">X </label>
+						<input type="text" id="inputX" name="inputX" value="@monTwitter"/>
 					</span></br>
 					<span>
-						<label for="Chambre">Instagram </label>
-						<input type="text" id="Chambre" name="nb_Chambre" value="@monInsta"/>
+						<label for="inputInsta">Instagram </label>
+						<input type="text" id="inputInsta" name="inputInsta" value="@monInsta"/>
 					</span></br>
 				</div>
 			</div>
@@ -184,7 +185,7 @@
 				<h3> mail :  gitefigiues@gmail.com</h3>
 			</div>
 			
-			<div> <img src="img/facebook.png" width="40px" height="40px"/> mon facebook</div>
+			<div> <img src="img/facebook.png" width="40px" height="40px"/> monFacebook</div>
 			<div> <img src="img/twitter.png" width="40px" height="40px"/> @monTwitter</div>
 			<div> <img src="img/instagram.png" width="40px" height="40px"/> @monInsta</div>
 			

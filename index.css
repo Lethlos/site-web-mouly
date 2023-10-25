@@ -270,6 +270,22 @@ input {
 	width: 50px;
 }
 
+.contactDiv input{
+	width: 150px;
+}
+
+.localisationDiv input {
+	width: 150px;
+}
+
+.rateDiv input{
+	width: 50px;
+}
+
+.capacityDiv input {
+	width: 50px;
+}
+
 .errMessage {
 	color: red;
 	font-size: 90%;
