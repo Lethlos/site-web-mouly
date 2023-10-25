@@ -124,9 +124,8 @@ footer {
 
 
 h2 {
-
-    color: var(--main-color); 
-	background-color : #000000;
+    color: var(--main-color);
+	font-family: 'Ubuntu', sans-serif;
 }
 
 .carroussel {
@@ -289,4 +288,8 @@ input {
 .errMessage {
 	color: red;
 	font-size: 90%;
+}
+
+.PhotoDiv {
+	margin-left: 5%;
 }

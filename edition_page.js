@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputCP = document.getElementById("inputCP");
 
     const inputNumTel = document.getElementById("inputNumTel");
+    const inputMail = document.getElementById("inputMail");
     const inputX = document.getElementById("inputX");
     const inputInsta = document.getElementById("inputInsta");
     const inputFacebook = document.getElementById("inputFacebook")
@@ -31,9 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     inputNumTel.addEventListener("input", justNumTel);
     inputNumTel.addEventListener("blur", testValidNumTel);
+    inputMail.addEventListener("input", justMail);
+    inputMail.addEventListener("blur", testValidMail);
     inputX.addEventListener("input", justX);
     inputInsta.addEventListener("input", justInsta);
     inputFacebook.addEventListener("input", justFacebook);
+    inputFacebook.addEventListener("blur", testValidFacebook);
     
   });
 
@@ -162,7 +166,7 @@ function justFacebook(e) {
     const input =  e.target;
     let inputValue = input.value;
 
-    inputValue = inputValue.replace(/[^a-zA-Z0-9.]/g, "").substr(0, 30);
+    inputValue = inputValue.replace(/[^a-zA-Z0-9\.]/g, "").substr(0, 30);
 
     // Mettre à jour la valeur de l'input
     input.value = inputValue;
@@ -176,7 +180,37 @@ function testValidFacebook(e) {
     const inputValue = document.getElementById("inputFacebook").value;
     const errInput = document.getElementById("errInputFacebook");
     let messageError = "";
-    if(inputValue.length < 5 && inputValue.length > 0) messageError = "* Le userNameFacebook doit faire au moins 5 caractères";
+    if(inputValue.length < 5 && inputValue.length > 0) messageError = "* Le userName Facebook doit faire au moins 5 caractères";
+
+    errInput.textContent = messageError;
+}
+
+  /**
+ * Formatte le username Facebook 
+ * @param {*} e 
+ */
+  function justMail(e) {
+
+    const input =  e.target;
+    let inputValue = input.value;
+
+    inputValue = inputValue.replace(/[^a-zA-Z0-9._@-]/g, "").substr(0, 30);
+
+    // Mettre à jour la valeur de l'input
+    input.value = inputValue;
+  }
+
+/**
+ * Affiche un message d'erreur si l'adresse mail n'est pas valide'
+ * @param {*} e 
+ */
+function testValidMail(e) {
+    const inputValue = document.getElementById("inputMail").value;
+    const errInput = document.getElementById("errInputMail");
+    const regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$/;
+
+    let messageError = "";
+    if(!regex.test(inputValue)) messageError = "* L'adresse mail n'est pas valide";
 
     errInput.textContent = messageError;
 }
