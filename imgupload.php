@@ -57,7 +57,7 @@ if(isset($_POST["submit"])){
             $imageSize = convert_filesize($_FILES["image"]["size"]); 
             
             // Compress size and upload image 
-            $compressedImage = compressImage($imageTemp, $imageUploadPath, 75); 
+            $compressedImage = compressImage($imageTemp, $imageUploadPath, 95); 
             
             if($compressedImage){ 
                 $compressedImageSize = filesize($compressedImage); 
@@ -97,7 +97,9 @@ function resize_image() {
         imagedestroy( $src );
         imagepng( $dst, $file_name ); // adjust format as needed
         imagedestroy( $dst );
+        echo "image redimentionnée";
         return($file_name);
+
     }
     else
     {

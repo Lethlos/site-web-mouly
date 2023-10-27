@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
     
   });
 
+  document.getElementById("boutonEnvoi").addEventListener("click", function() {
+    document.getElementById("monFormulaire").submit();
+});
+
 
 /**
  * Empèche l'écriture de caractère autre que des chiffres positifs dans l'input pris en argument
