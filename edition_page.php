@@ -27,13 +27,14 @@
 		<div class="content flex_col">
 			<h1 id="Photos" class="ancres"> Photos</h1>
 			<div class="PhotoDiv">
-				<h2>Ajouter Photos</h2>
 				<form action="imgupload.php" method="post" enctype="multipart/form-data">
-					<label>Sélectionnez une image:</label>
-					<input width="75px" type="file" name="image">
-					<input width="75px" type="submit" name="submit" value="Upload">
+					<div class="flex_col" >
+						<label>Sélectionnez une image:</label>
+						<input  style="width: 100%;" type="file" name="image">
+						<input  style="width: 100px;" type="submit" name="submit" value="Envoyer">
+					</div>
 				</form>
-				<h2>Supprimer Photos</h2>
+				<br/>
 				<form action="deleteImg.php" method="post" enctype="multipart/form-data">
 					<div class="flex_col">
 						<span>
@@ -57,7 +58,7 @@
 							<label for="serv5">image 5</label>
 						</span>
 					</div>
-					<input width="150px" type="submit" name="submit" value="Supprimer la selection">
+					<input style="width: 175px;" type="submit" name="submit" value="Supprimer la selection">
 				</form>
 				<h2>Rendu</h2>
 				<!-- Conteneur principal de tout le diaporama -->
@@ -212,17 +213,8 @@
 		</div>
 	</div>			‎
 	<footer>
-		<h1 id="Contact" class="white"> Contact : </h1>
-		<div>
-			<h3> Tel : 05 65 76 89 01</h3>
-			<h3> mail :  gitefigiues@gmail.com</h3>
-		</div>
-		
-		<div> <img src="img/facebook.png" /> monFacebook</div>
-		<div> <img src="img/twitter.png" /> @monTwitter</div>
-		<div> <img src="img/instagram.png" /> @monInsta</div>
-		<div> <button id="boutonEnvoi"> Enregistrer les changements </button> </div>
-		
+		<div> <button id="boutonEnvoi"> Annuler les modifications </button> </div>
+		<div> <button id="boutonEnvoi"> Enregistrer les modifications </button> </div>		
 	</footer>
 	
 	<script src="index2.js"></script>

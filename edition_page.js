@@ -41,9 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
     
   });
 
-  document.getElementById("boutonEnvoi").addEventListener("click", function() {
-    document.getElementById("form_envoi").submit();
+  document.addEventListener("boutonEnvoiClick", function () {
+    const boutonEnvoi = document.getElementById("boutonEnvoi");
+    boutonEnvoi.addEventListener("click", SaveDocument)
 });
+
+
+/**
+ * Enregistre le document avec toutes les informations écrites
+ */
+function SaveDocument() {
+
+}
 
 
 /**

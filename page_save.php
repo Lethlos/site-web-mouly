@@ -24,4 +24,5 @@ if(isset($_POST["submit"])){
     $rent->contact->facebook = $_POST['inputFacebook'];
     $rent->contact->x = $_POST['inputX'];
     $rent->contact->instagram = $_POST['inputInsta'];
+    echo "<script>console.log('Debug Objects: " . "page_save" . "' );</script>";
 }
