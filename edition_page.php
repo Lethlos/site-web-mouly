@@ -187,9 +187,9 @@
 				<h3> mail :  gitefigiues@gmail.com</h3>
 			</div>
 			
-			<div> <img src="img/facebook.png" width="40px" height="40px"/> monFacebook</div>
-			<div> <img src="img/twitter.png" width="40px" height="40px"/> @monTwitter</div>
-			<div> <img src="img/instagram.png" width="40px" height="40px"/> @monInsta</div>
+			<div> <img src="img/facebook.png" /> monFacebook</div>
+			<div> <img src="img/twitter.png" /> @monTwitter</div>
+			<div> <img src="img/instagram.png" /> @monInsta</div>
 			
 		</footer>
 
