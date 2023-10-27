@@ -66,6 +66,9 @@ if(isset($_POST["submit"])){
                 $status = 'success'; 
                 $statusMsg = "Image compressed successfully."; 
                 upload_image();
+                header("Location: edition_page.php");
+                exit;
+
             }else{ 
                 $statusMsg = "Image compress failed!"; 
             } 
