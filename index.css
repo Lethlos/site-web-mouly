@@ -293,3 +293,7 @@ input {
 .PhotoDiv {
 	margin-left: 5%;
 }
+
+.PhotoDiv input {
+	width: 200px;
+}
