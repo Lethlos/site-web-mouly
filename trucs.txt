@@ -42,4 +42,4 @@ AJOUTS
 V0.2
 Un calendrier sera géré par l'administrateur afin de présentr aux visiteurs les disponibilités du gite.
 
-https://prod.liveshare.vsengsaas.visualstudio.com/join?AA7BEE5EE8C434D8BAB7CEFB045E02D9D3DE
+https://prod.liveshare.vsengsaas.visualstudio.com/join?64649FFC8EE4C7579312A2A7D680672CCBA7
