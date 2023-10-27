@@ -193,7 +193,7 @@
 			
 		</footer>
 
-<script src="edition_page.js"></script>
+		<script src="index2.js"></script>
 	</body>
 	
 </html>
