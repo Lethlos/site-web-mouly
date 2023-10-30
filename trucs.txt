@@ -58,3 +58,5 @@ Ajouter à la suite du contenu du fichier ces 4 lignes en veillant à modifier l
     DocumentRoot "${INSTALL_DIR}/www/musicaveyron"
 </VirtualHost>
 Sauvegarder, redémarrer le serveur WAMP.
+
+coucou
