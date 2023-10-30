@@ -1,0 +1,34 @@
+CREATE TABLE `images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` longblob NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+CREATE TABLE `information` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  
+  `description` varchar(20000),
+    
+  `bed` int,
+  `place` int,
+  `bedroom` int,
+    
+  `week` int,
+  `night` int,
+  `week_high` int,
+  `night_high` int,
+    
+  `address` varchar(255),
+  `postcode` int,
+  `city` varchar(255),
+    
+  `phone` int,
+  `mail` varchar(255),
+  `facebook` varchar(255),
+  `x` varchar(255),
+  `instagram` varchar(255),
+  
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

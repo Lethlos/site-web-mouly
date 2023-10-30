@@ -1,28 +1,26 @@
 <?php
 
-include 'xml_save.php';
-$rent = new SimpleXMLElement($xmlstr);
-
 if(isset($_POST["submit"])){ 
-    $rent->description = $_POST['user_message'];
+    $description = $_POST['user_message'];
     
-    $rent->capacity->bed = $_POST['inputBed'];
-    $rent->capacity->place = $_POST['inputPlace'];
-    $rent->capacity->bedroom = $_POST['inputRoom'];
+    $bed = $_POST['inputBed'];
+    $place = $_POST['inputPlace'];
+    $bedroom = $_POST['inputRoom'];
     
-    $rent->price->week = $_POST['inputPriceWeek'];
-    $rent->price->night = $_POST['inputPriceNight'];
-    $rent->price->week_high = $_POST['inputPriceHighWeek'];
-    $rent->price->night_high = $_POST['inputPriceHighNight'];
+    $week = $_POST['inputPriceWeek'];
+    $night = $_POST['inputPriceNight'];
+    $week_high = $_POST['inputPriceHighWeek'];
+    $night_high = $_POST['inputPriceHighNight'];
 
-    $rent->location->address = $_POST['inputAdress'];
-    $rent->location->postcode = $_POST['inputCP'];
-    $rent->location->city = $_POST['inputCity'];
+    $address = $_POST['inputAdress'];
+    $postcode = $_POST['inputCP'];
+    $city = $_POST['inputCity'];
 
-    $rent->contact->phone = $_POST['inputNumTel'];
-    $rent->contact->mail = $_POST['inputMail'];
-    $rent->contact->facebook = $_POST['inputFacebook'];
-    $rent->contact->x = $_POST['inputX'];
-    $rent->contact->instagram = $_POST['inputInsta'];
-    echo "<script>console.log('Debug Objects: " . "page_save" . "' );</script>";
+    $phone = $_POST['inputNumTel'];
+    $mail = $_POST['inputMail'];
+    $facebook = $_POST['inputFacebook'];
+    $x = $_POST['inputX'];
+    $instagram = $_POST['inputInsta'];
+    echo "coucou test\noezijdoizjd";
 }
+
