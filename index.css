@@ -154,8 +154,11 @@ button {
 	margin-right: 2%;
 }
 
-
 body footer h1 {
+	margin-top : 2%;
+}
+
+body header h1 {
 	margin-top : 2%;
 }
 
@@ -303,3 +306,4 @@ input {
 .PhotoDiv {
 	margin-left: 5%;
 }
+
