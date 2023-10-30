@@ -50,9 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Enregistre le document avec toutes les informations écrites
  */
 function SaveDocument() {
-  parser = new DOMParser();
-  xmlDoc = parser.parseFromString(text,"text/xml");
-  
+  document.getElementById("form_envoi").submit();
 }
 
 
