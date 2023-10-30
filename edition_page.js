@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputInsta = document.getElementById("inputInsta");
     const inputFacebook = document.getElementById("inputFacebook")
 
+    const boutonEnvoi = document.getElementById("boutonEnvoi");
+
     inputBed.addEventListener("input", justNumber);
     inputPlace.addEventListener("input", justNumber);
     inputRoom.addEventListener("input", justNumber);
@@ -38,20 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
     inputInsta.addEventListener("input", justInsta);
     inputFacebook.addEventListener("input", justFacebook);
     inputFacebook.addEventListener("blur", testValidFacebook);
+
+    boutonEnvoi.addEventListener("click", SaveDocument);
     
   });
-
-  document.addEventListener("boutonEnvoiClick", function () {
-    const boutonEnvoi = document.getElementById("boutonEnvoi");
-    boutonEnvoi.addEventListener("click", SaveDocument)
-});
 
 
 /**
  * Enregistre le document avec toutes les informations écrites
  */
 function SaveDocument() {
-
+  parser = new DOMParser();
+  xmlDoc = parser.parseFromString(text,"text/xml");
+  
 }
 
 
