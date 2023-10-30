@@ -13,7 +13,6 @@ aller dans php.ini, changer :
 ->
 extension=gd
 
-
 /********************************************************/
 EXISTANT
 /********************************************************/
@@ -65,4 +64,42 @@ Ajouter à la suite du contenu du fichier ces 4 lignes en veillant à modifier l
 </VirtualHost>
 Sauvegarder, redémarrer le serveur WAMP.
 
-coucou
+Changer htt1 par http2 :
+- Activer le HTTP\2 dans les modules d'Apache (wamp64/bin/apache/apache[version]/conf/httpd.conf) en dé-commentant la ligne "#LoadModule http2_module modules/mod_http2.so
+- aller dans le ficheir C:\xampp\apache\conf\extra\httpd-vhosts.conf et ajouter à la fin : 
+
+    # 1. Support for HTTP on http://127.0.0.40/
+    <VirtualHost 127.0.0.40:80>
+        DocumentRoot "C:/xampp/htdocs/web-mouly"
+        DirectoryIndex index.html
+      Protocols h2 h2c http/1.1
+        <Directory "C:/xampp/htdocs/web-mouly">
+            AllowOverride None
+            Order Allow,Deny
+            Allow from All
+        </Directory>
+    </VirtualHost>
+    # 2. Support for HTTPS on https://127.0.0.40/
+    <VirtualHost 127.0.0.40:443>
+        DocumentRoot "C:/xampp/htdocs/web-mouly"
+      Protocols h2 h2c http/1.1
+        ServerName web-mouly
+        SSLEngine on
+        SSLCertificateFile "conf/ssl.crt/server.crt"
+        SSLCertificateKeyFile "conf/ssl.key/server.key"
+        <Directory "C:/xampp/htdocs/web-mouly">
+            Options All
+          AllowOverride All
+          Require all granted
+        </Directory>
+    </VirtualHost>
+
+- Redemarrer le serveur
+- Accéder au site par l'url https://127.0.0.40/index.html
+
+
+
+Changement eco-responsable :
+
+  - Couleur des menus -> Mauvais rendu, on est resté sur la couleur d'origine
+  - 
