@@ -1,6 +1,9 @@
 <?php
 
-if(isset($_POST["submit"])){ 
+$statusMsg = ''; 
+$status = 'error'; 
+echo 'test';
+
     $description = $_POST['user_message'];
     
     $bed = $_POST['inputBed'];
@@ -21,6 +24,16 @@ if(isset($_POST["submit"])){
     $facebook = $_POST['inputFacebook'];
     $x = $_POST['inputX'];
     $instagram = $_POST['inputInsta'];
-    echo "coucou test\noezijdoizjd";
-}
+
+    $insert = $db->query("INSERT into information (description, bed, place, bedroom, week, night, week_high, night_high, address, postcode, city, phone, mail, facebook, x, instagram) 
+    VALUES ('$description', '$bed', '$place', '$bedroom', '$week', '$night', '$week_high', '$night_high', '$address', '$postcode', '$city', '$phone', '$mail', '$facebook', '$x', '$instagram'"); 
+    if($insert){ 
+        $status = 'success'; 
+        $statusMsg = "File uploaded successfully."; 
+    }else{ 
+        $statusMsg = "File upload failed, please try again."; 
+    }
+
+echo $statusMsg;
+?>
 
