@@ -7,6 +7,12 @@ CREATE TABLE `images` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+POUR ACTIVER LA COMPRESSION D'IMAGE :
+aller dans php.ini, changer :
+;extension=gd
+->
+extension=gd
+
 
 /********************************************************/
 EXISTANT
