@@ -44,6 +44,8 @@ $x = $_POST['inputX'];
 echo $description."\n";
 $instagram = $_POST['inputInsta'];
 echo $description."\n";
+
+
 $delete = $db->query("DELETE from information");
 $insert = $db->query("INSERT into information (id, description, bed, place, bedroom, week, night, week_high, night_high, address, postcode, city, phone, mail, facebook, x, instagram) VALUES ('$id', '$description', '$bed', '$place', '$bedroom', '$week', '$night', '$week_high', '$night_high', '$address', '$postcode', '$city', '$phone', '$mail', '$facebook', '$x', '$instagram')"); 
 if($insert){ 

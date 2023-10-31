@@ -113,15 +113,15 @@
 				<div class="flex_row capacityDiv">
 					<span>
 						<label for="inputBed">Lit :</label>
-						<input type="number" id="inputBed" name="inputBed" value="4">
+						<input type="number" id="inputBed" name="inputBed" value="<?php echo $bed; ?>">
 					</span>
 					<span>
 						<label for="inputPlace">Place :</label>
-						<input type="number" id="inputPlace" name="inputPlace" value="2"/>
+						<input type="number" id="inputPlace" name="inputPlace" value="<?php echo $place; ?>"/>
 					</span>
 					<span>
 						<label for="inputRoom">Chambre :</label>
-						<input type="number" id="inputRoom" name="inputRoom" value="6"/>
+						<input type="number" id="inputRoom" name="inputRoom" value="<?php echo $bedroom; ?>"/>
 					</span>
 					<span></span>
 					<span></span>
@@ -132,19 +132,19 @@
 				<div class="flex_col rateDiv">
 					<span>
 						<label for="inputPriceWeek">Semaine moyenne saison à </label>
-						<input type="number" id="inputPriceWeek" name="inputPriceWeek" value="550"/> €
+						<input type="number" id="inputPriceWeek" name="inputPriceWeek" value="<?php echo $week; ?>"/> €
 					</span></br>
 					<span>
 						<label for="inputPriceNight">Nuitée Moyenne saison à </label>
-						<input type="number" id="inputPriceNight" name="inputPriceNight" value="85"/> €
+						<input type="number" id="inputPriceNight" name="inputPriceNight" value="<?php echo $night; ?>"/> €
 					</span></br>
 					<span>
 						<label for="inputPriceHighWeek">Semaine haute saison à </label>
-						<input type="number" id="inputPriceHighWeek" name="inputPriceHighWeek" value="650"/> €
+						<input type="number" id="inputPriceHighWeek" name="inputPriceHighWeek" value="<?php echo $week_high; ?>"/> €
 					</span></br>
 					<span>
 						<label for="inputPriceHighNight">Nuitée haute saison à </label>
-						<input type="number" id="inputPriceHighNight" name="inputPriceHighNight" value="110"/> €
+						<input type="number" id="inputPriceHighNight" name="inputPriceHighNight" value="<?php echo $night_high; ?>"/> €
 					</span></br>
 				</div>
 				<h1> Moyen de paiement </h1>
@@ -167,16 +167,16 @@
 				<div class="flex_col localisationDiv">
 					<span>
 						<label for="inputAdress">Adresse </label>
-						<input type="text" id="inputAdress" name="inputAdress" value="<?php echo $description; ?>"/>
+						<input type="text" id="inputAdress" name="inputAdress" value="<?php echo $address; ?>"/>
 					</span></br>
 					<span >
 						<label for="inputCP">Code Postal </label>
-						<input type="number" id="inputCP" name="inputCP" value="12330"/>
+						<input type="number" id="inputCP" name="inputCP" value="<?php echo $postcode; ?>"/>
 						<span id="errInputCP" class="errMessage"></span>
 					</span></br>
 					<span>
 						<label for="inputCity">Ville </label>
-						<input type="text" id="inputCity" name="inputCity" value="Salles-la-Source"/>
+						<input type="text" id="inputCity" name="inputCity" value="<?php echo $city; ?>"/>
 					</span></br>
 				</div>
 				
@@ -187,26 +187,26 @@
 				<div class="flex_col contactDiv">
 					<span>
 						<label for="inputNumTel">Tel </label>
-						<input type="text" id="inputNumTel" name="inputNumTel" value="05 65 76 89 01"/>
+						<input type="text" id="inputNumTel" name="inputNumTel" value="<?php echo $phone; ?>"/>
 						<span id="errInputNumTel" class="errMessage"></span>
 					</span><br/>
 					<span>
 						<label for="inputMail">Mail</label>
-						<input type="text" id="inputMail" name="inputMail" value="gitefigiues@gmail.com"/>
+						<input type="text" id="inputMail" name="inputMail" value="<?php echo $mail; ?>"/>
 						<span id="errInputMail" class="errMessage"></span>
 					</span><br/>
 					<span>
 						<label for="inputFacebook">Facebook </label>
-						<input type="text" id="inputFacebook" name="inputFacebook" value="monFacebook"/>
+						<input type="text" id="inputFacebook" name="inputFacebook" value="<?php echo $facebook; ?>"/>
 						<span id="errInputFacebook" class="errMessage"></span>
 					</span><br/>
 					<span>
 						<label for="inputX">X </label>
-						<input type="text" id="inputX" name="inputX" value="@monTwitter"/>
+						<input type="text" id="inputX" name="inputX" value="<?php echo $x; ?>"/>
 					</span><br/>
 					<span>
 						<label for="inputInsta">Instagram </label>
-						<input type="text" id="inputInsta" name="inputInsta" value="@monInsta"/>
+						<input type="text" id="inputInsta" name="inputInsta" value="<?php echo $instagram; ?>"/>
 					</span>
 					<br/>
 				</div>
