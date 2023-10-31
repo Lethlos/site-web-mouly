@@ -1,6 +1,10 @@
 <! Doctype html>
 <html>
 
+<?php 
+	include 'get_data.php';
+?>
+
 <head>
 	<title>Gite de Figuiès</title>
 	<link rel="stylesheet" href="normelize.css">
@@ -80,7 +84,7 @@
 			</div>
 			<form id="form_envoi" action="page_save.php" method="post">
 				<textarea id="msg" name="user_message">
-					Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.
+					<?php echo $description; ?>
 				</textarea>
 				<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
 				<div class="flex_col">
@@ -109,7 +113,7 @@
 				<div class="flex_row capacityDiv">
 					<span>
 						<label for="inputBed">Lit :</label>
-						<input type="number" id="inputBed" name="inputBed" value="4"/>
+						<input type="number" id="inputBed" name="inputBed" value="4">
 					</span>
 					<span>
 						<label for="inputPlace">Place :</label>
@@ -163,7 +167,7 @@
 				<div class="flex_col localisationDiv">
 					<span>
 						<label for="inputAdress">Adresse </label>
-						<input type="text" id="inputAdress" name="inputAdress" value="140 rue de Figuiès"/>
+						<input type="text" id="inputAdress" name="inputAdress" value="<?php echo $description; ?>"/>
 					</span></br>
 					<span >
 						<label for="inputCP">Code Postal </label>
