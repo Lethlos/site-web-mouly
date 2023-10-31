@@ -97,12 +97,12 @@ Changer htt1 par http2 :
 - Redemarrer le serveur
 - Accéder au site par l'url https://127.0.0.40/index.html
 
-
+https://meet.google.com/tja-jchr-pcm
 
 Changement eco-responsable :
 
   - Couleur des menus -> Mauvais rendu, on est resté sur la couleur d'origine
-  - 
-
+  - Ajout de phrase de bienvenue
+  - Passage en httpd2 
+  - Juste 2 polices
   
-https://meet.google.com/tja-jchr-pcm
