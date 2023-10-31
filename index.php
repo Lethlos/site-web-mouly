@@ -90,7 +90,7 @@
 						<li> Virement </li>
 					</ul>
 					<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
-					<img src="img/DisponibiliteTODO.png" width="800 px"/>
+					<img src="img/DisponibiliteTODO.png"/>
 					<br/>
 				</div>
 			</div>
