@@ -57,6 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialisez le calendrier FullCalendar
     const calendar = new FullCalendar.Calendar(calendarElement, {
       initialView: "dayGridMonth", // Vue par défaut du calendrier (mois)
+      events: reservations.map((reservation) => ({
+        title: "Réservation",
+        start: reservation.start,
+        end: reservation.end,
+      })),
     });
   
     // Affichez le calendrier
