@@ -8,7 +8,6 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
-		<script src="index2.js"></script>
 		<meta charset="utf-8">
 	</head>
 	
@@ -40,20 +39,20 @@
 		<p class="firstSentence"> Et si on préparait votre prochaine escale dans le Rouerge ? </p>
 		<!-- Conteneur principal de tout le diaporama -->
 		<div class="flex_division_diapo">
-					<div> </div>
-					<div class="diapo">
-						<!-- Conteneur des "diapos" -->
-						<div class="elements">
+			<div> </div>
+			<div class="diapo">
+				<!-- Conteneur des "diapos" -->
+				<div class="elements">
 							<?php 
 							include 'view.php';
 							?>
 						</div>
-						<!-- Flèches de navigation -->
-						<i id="nav-gauche" class="las la-chevron-left"><img src="img/arrow.png" alt="←" width="40px"></i>
-						<i id="nav-droite" class="las la-chevron-right"><img src="img/arrow.png" alt="→" width="40px" reversed></i>
-					</div>
-					<div> </div>
-				</div>
+				<!-- Flèches de navigation -->
+				<i id="nav-gauche" class="las la-chevron-left"><img src="img/arrow.png" alt="←" width="40px"></i>
+				<i id="nav-droite" class="las la-chevron-right"><img src="img/arrow.png" alt="→" width="40px" reversed></i>
+			</div>
+			<div> </div>
+		</div>
 		<p class="align_center">
 			Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. ers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.
 		</p>
@@ -117,6 +116,7 @@
 			
 		</footer>
 
+<script src="index2.js"></script>
 	</body>
 	
 </html>
