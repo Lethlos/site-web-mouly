@@ -49,6 +49,7 @@
 	padding-left: 1%;
 	padding-right: 1%;
 	margin: 0;
+	padding-bottom: 8%;
 }
 
 body{
@@ -309,8 +310,10 @@ input {
 }
 
 #calendar {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
+	height: 700px;
+	height: 50%;
   }
 
   #calendar h2 {
@@ -320,9 +323,17 @@ input {
   
   /* Styles pour les boutons spécifiques au calendrier */
   #calendar button {
-	background-color: blue; /* Exemple de style */
+	background-color: var(--main-color); /* Exemple de style */
 	color: white; /* Exemple de style */
 	border: none; /* Exemple de style */
-	padding: 10px; /* Exemple de style */
+	padding: 2px; /* Exemple de style */
 	border-radius: 5px; /* Exemple de style */
+	margin: 2px;
   }
+
+  #calendar .fc-h-event {
+	background-color: var(--main-color);
+	border: var(--main-color);
+	padding: 1%;
+  }
+

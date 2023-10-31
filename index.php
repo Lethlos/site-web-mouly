@@ -94,7 +94,6 @@
 					</ul>
 					<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
 					<div id="calendar"></div>
-					<br/>
 				</div>
 			</div>
 			<div>
