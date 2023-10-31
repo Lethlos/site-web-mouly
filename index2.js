@@ -1,31 +1,10 @@
-// On récupère le conteneur principal du diaporama
-const diapo = document.querySelector(".diapo");
-
-
-// On récupère les deux flèches
-let next = document.querySelector("#nav-droite");
-let prev = document.querySelector("#nav-gauche");
-
-
 // Variables globales
-let compteur = 0 // Compteur qui permettra de savoir sur quelle slide nous sommes
-let timer, elements, slides, slideWidth;
-
-// On récupère le conteneur de tous les éléments
-elements = document.querySelector(".elements");
+var compteur = 0 // Compteur qui permettra de savoir sur quelle slide nous sommes
+var timer, elements, slides, slideWidth;
 
 
-// On récupère un tableau contenant la liste des diapos
-slides = Array.from(elements.children)
 
 
-// On calcule la largeur visible du diaporama
-slideWidth = diapo.getBoundingClientRect().width;
-
-
-// On met en place les écouteurs d'évènements sur les flèches
-next.addEventListener("click", slideNext);
-prev.addEventListener("click", slidePrev);
 
 /**
  * Cette fonction fait défiler le diaporama vers la droite
@@ -61,8 +40,36 @@ function slidePrev(){
     elements.style.transform = `translateX(${decal}px)`;
 }
 
-// Mise en oeuvre du "responsive"
-window.addEventListener("resize", () => {
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // On récupère le conteneur principal du diaporama
+    const diapo = document.querySelector(".diapo");
+
+
+    // On récupère les deux flèches
+    let next = document.querySelector("#nav-droite");
+    let prev = document.querySelector("#nav-gauche");
+
+    // On récupère le conteneur de tous les éléments
+    elements = document.querySelector(".elements");
+
+
+    // On récupère un tableau contenant la liste des diapos
+    slides = Array.from(elements.children)
+
+
+    // On calcule la largeur visible du diaporama
     slideWidth = diapo.getBoundingClientRect().width;
-    slideNext();
-})
+    
+    // On met en place les écouteurs d'évènements sur les flèches
+    next.addEventListener("click", slideNext);
+    prev.addEventListener("click", slidePrev);
+
+    // Mise en oeuvre du "responsive"
+    window.addEventListener("resize", () => {
+        slideWidth = diapo.getBoundingClientRect().width;
+        slideNext();
+    })
+});
