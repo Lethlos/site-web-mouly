@@ -40,9 +40,27 @@ function slidePrev(){
     elements.style.transform = `translateX(${decal}px)`;
 }
 
+// Simuler des données de calendrier (remplacez ceci par les données de votre base de données)
+const reservations = [
+    { start: "2023-11-05", end: "2023-11-10" },
+    { start: "2023-11-15", end: "2023-11-20" },
+    // Ajoutez d'autres réservations ici
+  ];
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    const calendarElement = document.getElementById("calendar");
+
+    // Initialisez le calendrier FullCalendar
+    const calendar = new FullCalendar.Calendar(calendarElement, {
+      initialView: "dayGridMonth", // Vue par défaut du calendrier (mois)
+    });
+  
+    // Affichez le calendrier
+    calendar.render();
 
     // On récupère le conteneur principal du diaporama
     const diapo = document.querySelector(".diapo");

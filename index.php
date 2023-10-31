@@ -8,6 +8,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.js"></script>
 		<meta charset="utf-8">
 
 	</head>
@@ -91,7 +93,7 @@
 						<li> Virement </li>
 					</ul>
 					<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
-					<img src="img/DisponibiliteTODO.png"/>
+					<div id="calendar"></div>
 					<br/>
 				</div>
 			</div>
