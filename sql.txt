@@ -7,7 +7,7 @@ CREATE TABLE `images` (
 
 
 CREATE TABLE `information` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   
   `description` varchar(20000),
     

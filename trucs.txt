@@ -106,3 +106,14 @@ Changement eco-responsable :
   - Passage en httpd2 
   - Juste 2 polices
   
+
+trucs à faire pour le rendu vendredi :  
+
+- faire 3 photos du gite
+- regarder les prix en basse saison
+- regarder la capacité
+- savoir ou est le gite
+- vérifier que le gite est bien libre
+- faire une demande de réservation
+
+regarder le poid d'utilisateur lambda après utilisation de ces trucs
