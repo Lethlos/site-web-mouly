@@ -43,7 +43,7 @@ echo 'test';
     $instagram = $_POST['inputInsta'];
     echo $description."\n";
 
-    $insert = $db->query("INSERT into information (description, bed, place, bedroom, week, night, week_high, night_high, address, postcode, city, phone, mail, facebook, x, instagram) VALUES ('$description', '$bed', '$place', '$bedroom', '$week', '$night', '$week_high', '$night_high', '$address', '$postcode', '$city', '$phone', '$mail', '$facebook', '$x', '$instagram'"); 
+    $insert = $db->query("INSERT into information (description, bed, place, bedroom, week, night, week_high, night_high, address, postcode, city, phone, mail, facebook, x, instagram) VALUES ('$description', '$bed', '$place', '$bedroom', '$week', '$night', '$week_high', '$night_high', '$address', '$postcode', '$city', '$phone', '$mail', '$facebook', '$x', '$instagram')"); 
     if($insert){ 
         $status = 'success'; 
         $statusMsg = "File uploaded successfully."; 
