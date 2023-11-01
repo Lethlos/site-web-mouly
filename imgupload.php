@@ -141,3 +141,5 @@ function upload_image() {
         } 
     } 
 }
+
+?>

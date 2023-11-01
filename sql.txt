@@ -35,31 +35,32 @@ CREATE TABLE if not exists `information` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE if not exists `services` (
+
+CREATE or replace TABLE `services` (
+  `id` varchar(10) not null,
   `name` varchar(255) NOT NULL,
-  
   `enabled` varchar(10),
 
-  PRIMARY KEY (`name`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-insert into `services` (name, enabled) VALUES
+insert into `services` (id, name, enabled) VALUES
 
-("Petit-déjeuner", ""),
-("Service de ménage", ""),
-("Literie comprise", ""),
-("Restauration à proximité", ""),
-("Wi-Fi", ""),
-("Parking", ""),
-("Jardin ou espace extérieur", ""),
-("Animaux de compagnie autorisés", ""),
-("Fumeurs autorisés", ""),
-("Vélos à disposition", ""),
-("Équipements pour les enfants", ""),
-("Activités de loisirs à proximité", ""),
-("Transports en communs à proximité", ""),
-("Accès handicapés", ""),
-("Climatisation", ""),
-("cuisine équipée", ""),
-("Vidéo-surveillance ", "")
+("serv1", "Petit-déjeuner", ""),
+("serv2", "Service de ménage", ""),
+("serv3", "Literie comprise", ""),
+("serv4", "Restauration à proximité", ""),
+("serv5", "Wi-Fi", ""),
+("serv6", "Parking", ""),
+("serv7", "Jardin ou espace extérieur", ""),
+("serv8", "Animaux de compagnie autorisés", ""),
+("serv9", "Fumeurs autorisés", ""),
+("serv10", "Vélos à disposition", ""),
+("serv11", "Équipements pour les enfants", ""),
+("serv12", "Activités de loisirs à proximité", ""),
+("serv13", "Transports en communs à proximité", ""),
+("serv14", "Accès handicapés", ""),
+("serv15", "Climatisation", ""),
+("serv16", "cuisine équipée", ""),
+("serv17", "Vidéo-surveillance ", "")

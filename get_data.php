@@ -60,10 +60,11 @@ function import_services_admin($db) {
     if ($services != null) {
         $count = 1;
         while ($row = $services->fetch_array()) {
+            $service_id = $row["id"];
             $service_name = $row["name"];
             $service_checked = $row["enabled"];
-            echo "<span> <input type=\"checkbox\" id=\"serv".$count."\" name=\"serv".$count."\" ".$service_checked." /> 
-            <label name=\"servlabel".$count."\" for=\"serv".$count."\">".$service_name."</label> </span>";
+            echo "<span> <input type=\"checkbox\" id=\"".$service_id."\" name=\"".$service_id."\" ".$service_checked." /> 
+            <label id=\"servlabel".$count."\" name=\"servlabel".$count."\" for=\"".$service_id."\">".$service_name."</label> </span>";
             $count++;
         }
     }
@@ -74,12 +75,10 @@ function import_services_customer($db) {
 
     $services = $db->query("SELECT * FROM services");
     if ($services != null) {
-        $count = 1;
         while ($row = $services->fetch_array()) {
             if ($row["enabled"] == "checked") {
                 $service_name = $row["name"];
                 echo "<li> ".$service_name." </li>";
-                $count++;
             }
         }
     }
