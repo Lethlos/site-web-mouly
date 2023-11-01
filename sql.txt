@@ -1,6 +1,6 @@
 create database IF NOT EXISTS gite;
 
-CREATE TABLE `images` (
+CREATE TABLE if not exists `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `image` longblob NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
@@ -8,7 +8,7 @@ CREATE TABLE `images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-CREATE TABLE `information` (
+CREATE TABLE if not exists `information` (
   `id` int(11) NOT NULL,
   
   `description` varchar(20000),
