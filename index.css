@@ -337,3 +337,12 @@ input {
 	padding: 1%;
   }
 
+/* Médias requêtes pour les écrans de petite taille (tablettes et téléphones) */
+@media (max-width: 1260px) {
+	.responsive_decalage {
+		margin-top: 130px; /* Ajoutez le padding désiré pour les h1 */
+	}
+	#Contact {
+		display: none;
+	}
+}
