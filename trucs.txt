@@ -47,22 +47,6 @@ AJOUTS
 V0.2
 Un calendrier sera géré par l'administrateur afin de présentr aux visiteurs les disponibilités du gite.
 
-https://prod.liveshare.vsengsaas.visualstudio.com/join?64649FFC8EE4C7579312A2A7D680672CCBA7
-
-Passer du HTTP\1 au HTTP\2 :
-
-Installer OpenSSL sur le PC
-Ajouter le PATH dans les variables d'environnement système "C:\Program Files\OpenSSL-Win64\bin"
-Activer le HTTP\2 dans les modules d'Apache (wamp64/bin/apache/apache[version]/conf/httpd.conf) en dé-commentant la ligne "#LoadModule http2_module modules/mod_http2.so
-"
-Ouvrir le terminal et exécuter la commande "openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout ma.key -out ma.crt -config "C:/Program Files/OpenSSL-Win64/bin/openssl.cfg" (ne pas oublier de bien se placer dans le dossier racine du site web pour que ce soit plus facile)
-Ouvrir le fichier "httpd-vhosts.conf" dans "wamp64/bin/apache/apache[version]/conf/extra/httpd-vhosts.conf"
-Ajouter à la suite du contenu du fichier ces 4 lignes en veillant à modifier la ligne "DocumentRoot" en fonction de son emplacement de site web. Pour ma part :
-<VirtualHost *:443>
-    ServerName localhost
-    DocumentRoot "${INSTALL_DIR}/www/musicaveyron"
-</VirtualHost>
-Sauvegarder, redémarrer le serveur WAMP.
 
 Changer htt1 par http2 :
 - Activer le HTTP\2 dans les modules d'Apache (wamp64/bin/apache/apache[version]/conf/httpd.conf) en dé-commentant la ligne "#LoadModule http2_module modules/mod_http2.so
@@ -118,6 +102,14 @@ Changement eco-responsable :
 - savoir ou est le gite
 - vérifier que le gite est bien libre
 - faire une demande de réservation
+
+travail à finir :
+- enregistrer toutes les données et les importer dans les pages
+- suppression des images
+- calendrier (back)
+- login (et delete le bouton de login du coup)
+- vérifier l'écoconception
+- refactor/clean du code
 
 regarder le poid d'utilisateur lambda après utilisation de ces trucs
 
