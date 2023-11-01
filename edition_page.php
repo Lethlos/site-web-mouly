@@ -28,6 +28,20 @@
 			<button id="login">Sign out</button>
 		</div>
 	</header>
+
+	<!-- Popup de login -->
+	<div class="popup" id="loginPopup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="button" onclick="checkLogin()">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
 	<div class="flex_row_center">
 		<div class="content flex_col">
 			<h1 id="Photos" class="ancres"> Photos</h1>
@@ -167,25 +181,22 @@
 				<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
 				<div class="DispoDiv">
 					<div class="margin_bottom">
-						<form id="form_addRes" action="addRes.php" method="post">
-							<p>Nouvelle réservation : 
-							Du <input type="date" class="datePicker" id="inputStartAddDate" name="selectedDate"></input>
-							Au <input type="date" class="datePicker" id="inputEndAddDate" name="selectedDate"></input>
-							<input style="width: 175px;" type="submit" name="submit" value="Valider"></input>
-							<span id="errSelectedAddDate" class="errMessage">* Veuillez choisir un interval valide</span>
-							</p>
-						</form>
-						<form id="form_deleteRes" action="deleteRes.php" method="post">
-							<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
-							<select id="dateDropdown">
-								<!-- Remplir la liste déroulante avec les dates de début à partir du tableau reservations -->
-								<option value="">Sélectionnez une date</option>
-								<!-- Boucle pour ajouter les options à partir du tableau de réservations -->
-							</select>
-							<input style="width: 175px;" type="submit" name="submit" value="Supprimer"></input>
-							<span id="errSelectedDelDate" class="errMessage">* Veuillez choisir une date</span>
-							</p>
-						</form>
+						<p>Nouvelle réservation : 
+						Du <input type="date" class="datePicker" id="inputStartAddDate" name="selectedDate"></input>
+						Au <input type="date" class="datePicker" id="inputEndAddDate" name="selectedDate"></input>
+						<input style="width: 175px;" type="submit" name="submitReservation" value="Valider"></input>
+						<span id="errSelectedAddDate" class="errMessage">* Veuillez choisir un interval valide</span>
+						</p>
+
+						<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
+						<select id="dateDropdown">
+							<!-- Remplir la liste déroulante avec les dates de début à partir du tableau reservations -->
+							<option value="">Sélectionnez une date</option>
+							<!-- Boucle pour ajouter les options à partir du tableau de réservations -->
+						</select>
+						<input style="width: 175px;" type="submit" name="submitDeleteReservation" value="Supprimer"></input>
+						<span id="errSelectedDelDate" class="errMessage">* Veuillez choisir une date</span>
+						</p>
 					</div>
 					<div id="calendar"></div>
 				</div>
