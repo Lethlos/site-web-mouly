@@ -229,7 +229,7 @@
 		<div> <button id="boutonEnvoi"> Enregistrer les modifications </button> </div>		
 	</footer>
 	
-	<script src="index2.js"></script>
+	<script></script>
 </body>
 
 </html>

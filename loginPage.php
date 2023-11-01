@@ -1,10 +1,6 @@
 <! Doctype html>
 <html>
 
-<?php 
-	include 'get_data.php';
-?>
-
 	<head>
 		<title>Gite de Figuiès</title>
 		<link rel="stylesheet" href="index.css">
@@ -24,10 +20,10 @@
             <div class="popup" id="loginPopup">
                 <div class="popup-content">
                     <h2>Login</h2>
-                    <form id="loginForm">
-                        <input type="text" id="username" placeholder="Username" required>
-                        <input type="password" id="password" placeholder="Password" required>
-                        <button type="button" onclick="checkLogin()">Login</button>
+                    <form id="loginForm" name="loginForm" action="login.php" method="post" enctype="multipart/form-data">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <button type="submit" name="submit">Login</button>
                     </form>
                 </div>
             </div>
