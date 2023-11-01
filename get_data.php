@@ -3,27 +3,52 @@
 require_once 'dbConfig.php'; 
 
 $information = $db->query("SELECT * FROM information where id='1'");
+if ($information) {
 
-$row = mysqli_fetch_assoc($information);
-$description = $row['description'];
+    $row = mysqli_fetch_assoc($information);
+    $description = $row['description'];
+    
+    $bed = $row['bed'];
+    $place = $row['place'];
+    $bedroom = $row['bedroom'];
+    
+    $week = $row['week'];
+    $night = $row['night'];
+    $week_high = $row['week_high'];
+    $night_high = $row['night_high'];
+    
+    $address = $row['address'];
+    $postcode = $row['postcode'];
+    $city = $row['city'];
+    
+    $phone = $row['phone'];
+    $mail = $row['mail'];
+    $facebook = $row['facebook'];
+    $x = $row['x'];
+    $instagram = $row['instagram'];
 
-$bed = $row['bed'];
-$place = $row['place'];
-$bedroom = $row['bedroom'];
+} else {
+    $description = "";
 
-$week = $row['week'];
-$night = $row['night'];
-$week_high = $row['week_high'];
-$night_high = $row['night_high'];
+    $bed = "0";
+    $place = "0";
+    $bedroom = "0";
 
-$address = $row['address'];
-$postcode = $row['postcode'];
-$city = $row['city'];
+    $week = "0";
+    $night = "0";
+    $week_high = "0";
+    $night_high = "0";
 
-$phone = $row['phone'];
-$mail = $row['mail'];
-$facebook = $row['facebook'];
-$x = $row['x'];
-$instagram = $row['instagram'];
+    $address = "";
+    $postcode = "";
+    $city = "";
+
+    $phone = "";
+    $mail = "";
+    $facebook = "";
+    $x = "";
+    $instagram = "";
+
+}
 
 ?>

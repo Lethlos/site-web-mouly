@@ -83,9 +83,9 @@
 				</div>
 			</div>
 			<form id="form_envoi" action="page_save.php" method="post">
-				<textarea id="msg" name="user_message">
-					<?php echo $description; ?>
-				</textarea>
+				
+			<?php echo "<textarea id=\"msg\" name=\"user_message\">".htmlspecialchars($description, ENT_QUOTES, 'UTF-8')."</textarea>"; ?>
+				
 				<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
 				<div class="flex_col">
 					<span>
@@ -213,6 +213,7 @@
 				<div>
 					
 				</div>
+				<div id="calendar"></div>
 			</form>
 		</div>
 	</div>			‎
