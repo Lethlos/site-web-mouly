@@ -68,10 +68,9 @@
 				<div>
 					<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
 					<ul>
-					<li> service 1 </li>
-					<li> service 2 </li>
-					<li> service 3 </li>
-					<li> service 4 </li>
+					<?php
+					import_services_customer($db);;
+					?>
 					</ul>
 				</div>
 				<div>

@@ -4,46 +4,29 @@ require_once 'dbConfig.php';
 
 $statusMsg = ''; 
 $status = 'error'; 
-echo 'test';
 
 $id = 1;
 
 $description = $_POST['user_message'];
-echo $description."\n";
 
 $bed = $_POST['inputBed'];
-echo $bed."\n";
 $place = $_POST['inputPlace'];
-echo $place."\n";
 $bedroom = $_POST['inputRoom'];
-echo $bedroom."\n";
 
 $week = $_POST['inputPriceWeek'];
-echo $week."\n";
 $night = $_POST['inputPriceNight'];
-echo $night."\n";
 $week_high = $_POST['inputPriceHighWeek'];
-echo $week_high."\n";
 $night_high = $_POST['inputPriceHighNight'];
-echo $night_high."\n";
 
 $address = $_POST['inputAdress'];
-echo $address."\n";
 $postcode = $_POST['inputCP'];
-echo $postcode."\n";
 $city = $_POST['inputCity'];
-echo $city."\n";
 
 $phone = $_POST['inputNumTel'];
-echo $phone."\n";
 $mail = $_POST['inputMail'];
-echo $mail."\n";
 $facebook = $_POST['inputFacebook'];
-echo $facebook."\n";
 $x = $_POST['inputX'];
-echo $description."\n";
 $instagram = $_POST['inputInsta'];
-echo $description."\n";
 
 
 $delete = $db->query("DELETE from information");
@@ -56,5 +39,20 @@ if($insert){
 }
 
 echo $statusMsg;
+
+$count = 1;
+$service_name = "";
+while ($_POST["serv".$count] != null) {
+    if (isset($_POST["serv".$count])) {
+        $service_checked = "checked";
+
+    } else {
+        $service_checked = "";
+    }
+    $service_name = $_POST["servlabel".$count];
+    $insert = $db->query("INSERT or replace into services (name, enabled) values ('$service_name', '$service_checked')");
+    $count++;
+}
+
 ?>
 
