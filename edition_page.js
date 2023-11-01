@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputPlace = document.getElementById("inputPlace"); 
     const inputRoom = document.getElementById("inputRoom");
 
+    const dateDropdown = document.getElementById("dateDropdown");
+
     const inputPriceWeek = document.getElementById("inputPriceWeek");
     const inputPriceNight = document.getElementById("inputPriceNight"); 
     const inputPriceHighWeek = document.getElementById("inputPriceHighWeek");
@@ -43,6 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     boutonEnvoi.addEventListener("click", SaveDocument);
     
+
+
+    reservations.forEach(reservation => {
+      const option = document.createElement("option");
+      option.value = reservation.start;
+      option.textContent = reservation.start;
+      dateDropdown.appendChild(option);
+    });
   });
 
 

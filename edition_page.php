@@ -7,7 +7,6 @@
 
 <head>
 	<title>Gite de Figuiès</title>
-	<link rel="stylesheet" href="normelize.css">
 	<link rel="stylesheet" href="index.css">
 	<script src="edition_page.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -15,6 +14,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
 	<meta charset="utf-8">
 </head>
@@ -83,7 +84,7 @@
 				</div>
 			</div>
 			<form id="form_envoi" action="page_save.php" method="post">
-				<textarea id="msg" name="user_message" >
+				<textarea id="msg" name="user_message" placeholder="Description du gite">
 					<?php echo $description; ?>
 				</textarea>
 				<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
@@ -181,7 +182,30 @@
 				</div>
 				
 				<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
-				<img src="img/DisponibiliteTODO.png"/>
+				<div class="DispoDiv">
+				<span>
+					<form id="form_addRes" action="addRes.php" method="post">
+						<p>Nouvelle réservation : 
+						Du <input type="date" id="datePicker" name="selectedDate"></input>
+						Au  <input type="date" id="datePicker" name="selectedDate"></input>
+						<input style="width: 175px;" type="submit" name="submit" value="Valider"></input>
+						</p>
+					</form>
+					<form id="form_deleteRes" action="deleteRes.php" method="post">
+						<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
+						<select id="dateDropdown">
+							<!-- Remplir la liste déroulante avec les dates de début à partir du tableau reservations -->
+							<option value="">Sélectionnez une date</option>
+							<!-- Boucle pour ajouter les options à partir du tableau de réservations -->
+						</select>
+						<input style="width: 175px;" type="submit" name="submit" value="Supprimer"></input>
+						</p>
+					</form>
+				</span>
+				<div id="calendar"></div>
+				</div>
+				
+				
 				
 				<h1> Contact </h1>
 				<div class="flex_col contactDiv">
@@ -211,9 +235,9 @@
 					<br/>
 				</div>
 				<div>
+
 					
-				</div>
-				<div id="calendar"></div>
+				</div>			
 			</form>
 		</div>
 	</div>			‎

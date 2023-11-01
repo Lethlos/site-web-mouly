@@ -97,8 +97,8 @@ footer {
 .flex_col {
   display: flex;
   flex-direction: column;
-	align-items: right;
-	justify-content : space_between;
+  align-items: right;
+  justify-content : space_between;
 }
 
 .flex_division {
@@ -309,11 +309,15 @@ input {
 	margin-left: 5%;
 }
 
+.DispoDiv {
+	margin-left: 5%;
+}
+
 #calendar {
 	width: 100%;
 	margin: 0 auto;
 	height: 700px;
-	height: 50%;
+	max-width: 600px;
   }
 
   #calendar h2 {
@@ -345,4 +349,13 @@ input {
 	#Contact {
 		display: none;
 	}
+}
+
+#datePicker {
+	width: 130px;
+}
+
+input {
+	margin-top : 2px;
+	margin-bottom: 2px;
 }
