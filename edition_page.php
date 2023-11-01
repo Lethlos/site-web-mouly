@@ -166,26 +166,28 @@
 				
 				<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
 				<div class="DispoDiv">
-				<span>
-					<form id="form_addRes" action="addRes.php" method="post">
-						<p>Nouvelle réservation : 
-						Du <input type="date" id="datePicker" name="selectedDate"></input>
-						Au  <input type="date" id="datePicker" name="selectedDate"></input>
-						<input style="width: 175px;" type="submit" name="submit" value="Valider"></input>
-						</p>
-					</form>
-					<form id="form_deleteRes" action="deleteRes.php" method="post">
-						<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
-						<select id="dateDropdown">
-							<!-- Remplir la liste déroulante avec les dates de début à partir du tableau reservations -->
-							<option value="">Sélectionnez une date</option>
-							<!-- Boucle pour ajouter les options à partir du tableau de réservations -->
-						</select>
-						<input style="width: 175px;" type="submit" name="submit" value="Supprimer"></input>
-						</p>
-					</form>
-				</span>
-				<div id="calendar"></div>
+					<div class="margin_bottom">
+						<form id="form_addRes" action="addRes.php" method="post">
+							<p>Nouvelle réservation : 
+							Du <input type="date" class="datePicker" id="inputStartAddDate" name="selectedDate"></input>
+							Au <input type="date" class="datePicker" id="inputEndAddDate" name="selectedDate"></input>
+							<input style="width: 175px;" type="submit" name="submit" value="Valider"></input>
+							<span id="errSelectedAddDate" class="errMessage">* Veuillez choisir un interval valide</span>
+							</p>
+						</form>
+						<form id="form_deleteRes" action="deleteRes.php" method="post">
+							<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
+							<select id="dateDropdown">
+								<!-- Remplir la liste déroulante avec les dates de début à partir du tableau reservations -->
+								<option value="">Sélectionnez une date</option>
+								<!-- Boucle pour ajouter les options à partir du tableau de réservations -->
+							</select>
+							<input style="width: 175px;" type="submit" name="submit" value="Supprimer"></input>
+							<span id="errSelectedDelDate" class="errMessage">* Veuillez choisir une date</span>
+							</p>
+						</form>
+					</div>
+					<div id="calendar"></div>
 				</div>
 				
 				

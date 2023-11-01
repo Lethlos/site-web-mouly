@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const dateDropdown = document.getElementById("dateDropdown");
 
+    const inputStartAddDate = document.getElementById("inputStartAddDate");
+    const inputEndAddDate = document.getElementById("inputEndAddDate");
+
     const inputPriceWeek = document.getElementById("inputPriceWeek");
     const inputPriceNight = document.getElementById("inputPriceNight"); 
     const inputPriceHighWeek = document.getElementById("inputPriceHighWeek");
@@ -45,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     boutonEnvoi.addEventListener("click", SaveDocument);
     
-
+    inputStartAddDate.addEventListener("change", hideAddDateError);
+    inputEndAddDate.addEventListener("change", hideAddDateError);
+    dateDropdown.addEventListener("change", hideDelDateError);
 
     reservations.forEach(reservation => {
       const option = document.createElement("option");
@@ -235,4 +240,14 @@ function testValidMail(e) {
     if(!regex.test(inputValue)) messageError = "* L'adresse mail n'est pas valide";
 
     errInput.textContent = messageError;
+}
+
+function hideAddDateError(e) {
+  const errInput = document.getElementById("errSelectedAddDate");
+  errInput.textContent = "";
+}
+
+function hideDelDateError(e) {
+  const errInput = document.getElementById("errSelectedDelDate");
+  errInput.textContent = "";
 }

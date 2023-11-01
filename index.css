@@ -315,7 +315,7 @@ input {
 
 #calendar {
 	width: 100%;
-	margin: 0 auto;
+	margin: 0;
 	height: 600px;
 	max-width: 600px;
   }
@@ -351,11 +351,15 @@ input {
 	}
 }
 
-#datePicker {
+.datePicker {
 	width: 130px;
 }
 
 input {
 	margin-top : 2px;
 	margin-bottom: 2px;
+}
+
+.margin_bottom {
+	margin-bottom: 40px;
 }
