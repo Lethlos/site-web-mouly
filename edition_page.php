@@ -89,26 +89,9 @@
 				</textarea>
 				<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
 				<div class="flex_col">
-					<span>
-						<input type="checkbox" id="serv1" name="serv1" checked />
-						<label for="serv1">service 1</label>
-					</span>
-					<span>
-						<input type="checkbox" id="serv2" name="serv2" checked />
-						<label for="serv2">service 2</label>
-					</span>
-					<span>
-						<input type="checkbox" id="serv3" name="serv3" checked />
-						<label for="serv3">service 3</label>
-					</span>
-					<span>
-						<input type="checkbox" id="serv4" name="serv4" checked />
-						<label for="serv4">service 4</label>
-					</span>
-					<span>
-						<input type="checkbox" id="serv5" name="serv5" checked />	
-						<label for="serv5">service 5</label>
-					</span>
+					<?php
+					import_services_admin($db);
+					?>
 				</div>
 				<h1 id="Capacity" class="ancres"> Capacités </h1>
 				<div class="flex_row capacityDiv">

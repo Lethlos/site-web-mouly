@@ -51,4 +51,20 @@ if ($row != null) {
 
 }
 
+function import_services_admin($db) {
+    
+    $service_name = "";
+    $service_checked = "";
+    
+    $services = $db->query("SELECT * FROM services");
+    if ($services != null) {
+        while ($row = $services->fetch_array()) {
+            $service_name = $row["name"];
+            $service_checked = $row["enabled"];
+            echo "<span> <input type=\"checkbox\" id=\"serv1\" name=\"serv1\" ".$service_checked." /> 
+            <label for=\"serv1\">".$service_name."</label> </span>";
+        }
+    }
+}
+
 ?>
