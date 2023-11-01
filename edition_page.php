@@ -43,24 +43,24 @@
 				<form action="deleteImg.php" method="post" enctype="multipart/form-data">
 					<div class="flex_col">
 						<span>
-							<input type="checkbox" id="serv1" name="serv1"  />
-							<label for="serv1">image 1</label>
+							<input type="checkbox" id="img1" name="img1"  />
+							<label for="img1">image 1</label>
 						</span>
 						<span>
-							<input type="checkbox" id="serv2" name="serv2"  />
-							<label for="serv2">image 2</label>
+							<input type="checkbox" id="img2" name="img2"  />
+							<label for="img2">image 2</label>
 						</span>
 						<span>
-							<input type="checkbox" id="serv3" name="serv3"  />
-							<label for="serv3">image 3</label>
+							<input type="checkbox" id="img3" name="img3"  />
+							<label for="img3">image 3</label>
 						</span>
 						<span>
-							<input type="checkbox" id="serv4" name="serv4"  />
-							<label for="serv4">image 4</label>
+							<input type="checkbox" id="img4" name="img4"  />
+							<label for="img4">image 4</label>
 						</span>
 						<span>
-							<input type="checkbox" id="serv5" name="serv5"  />	
-							<label for="serv5">image 5</label>
+							<input type="checkbox" id="img5" name="img5"  />	
+							<label for="img5">image 5</label>
 						</span>
 					</div>
 					<input style="width: 175px;" type="submit" name="submit" value="Supprimer la selection">
