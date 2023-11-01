@@ -52,7 +52,21 @@ const reservations = [
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    const calendarElement = document.getElementById("calendar");
 
+    // Initialisez le calendrier FullCalendar
+    const calendar = new FullCalendar.Calendar(calendarElement, {
+      initialView: "dayGridMonth", // Vue par défaut du calendrier (mois)
+      events: reservations.map((reservation) => ({
+        title: "Réservation",
+        start: reservation.start,
+        end: reservation.end,
+      })),
+    });
+  
+    // Affichez le calendrier
+    calendar.render();
+    
     // On récupère le conteneur principal du diaporama
     const diapo = document.querySelector(".diapo");
 
