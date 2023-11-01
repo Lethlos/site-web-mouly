@@ -1,9 +1,11 @@
 var errCP = "";
 
 document.addEventListener("DOMContentLoaded", function () {
+
     const inputBed = document.getElementById("inputBed");
     const inputPlace = document.getElementById("inputPlace"); 
     const inputRoom = document.getElementById("inputRoom");
+    
 
     const dateDropdown = document.getElementById("dateDropdown");
 
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputFacebook = document.getElementById("inputFacebook")
 
     const boutonEnvoi = document.getElementById("boutonEnvoi");
+
 
     inputBed.addEventListener("input", justNumber);
     inputPlace.addEventListener("input", justNumber);
@@ -58,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       option.textContent = reservation.start;
       dateDropdown.appendChild(option);
     });
+
   });
 
 
@@ -251,3 +255,4 @@ function hideDelDateError(e) {
   const errInput = document.getElementById("errSelectedDelDate");
   errInput.textContent = "";
 }
+ 
