@@ -3,9 +3,9 @@
 require_once 'dbConfig.php'; 
 
 $information = $db->query("SELECT * FROM information where id='1'");
-if ($information) {
-
-    $row = mysqli_fetch_assoc($information);
+$row = mysqli_fetch_assoc($information);
+if ($row != null) {
+    
     $description = $row['description'];
     
     $bed = $row['bed'];
