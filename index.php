@@ -1,6 +1,10 @@
 <! Doctype html>
 <html>
 
+<?php 
+	include 'get_data.php';
+?>
+
 	<head>
 		<title>Gite de Figuiès</title>
 		<link rel="stylesheet" href="index.css">
@@ -57,7 +61,7 @@
 			<div> </div>
 		</div>
 		<p class="align_center">
-			Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. ers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.Le spam est l'un des problèmes les plus courants rencontrés par les utilisateurs d'Internet. Les courriers indésirables sont non seulement une nuisance, mais peuvent également contenir des liens ou des pièces jointes malveillants, menaçant la sécurité des ordinateurs et des données personnelles. Dans ce contexte, la détection de spam est un enjeu majeur pour les experts en sécurité informatique.
+			<?php echo $description; ?>
 		</p>
 		<div class="flex_division">
 			<div class="flex_col">
@@ -73,19 +77,19 @@
 				<div>
 					<h1 id="Capacité" class="ancres"> Capacités </h1>
 					<div class="flex_row"> 
-						<span> <div class="flex_row"> <img src="img/bed_icon.svg" width="60 px"/> Lit : 4 </div></span>
-						<span> <div class="flex_row"> <img src="img/place_icon.svg" width="60 px"/> Place : 2 </div></span>
-						<span> <div class="flex_row"> <img src="img/room_icon.svg" width="60 px"/> Chambre : 6 </div></span>
+						<span> <div class="flex_row"> <img src="img/bed_icon.svg" width="60 px"/> Lit : <?php echo $bed; ?></div></span>
+						<span> <div class="flex_row"> <img src="img/place_icon.svg" width="60 px"/> Place : <?php echo $place; ?> </div></span>
+						<span> <div class="flex_row"> <img src="img/room_icon.svg" width="60 px"/> Chambre : <?php echo $bedroom; ?> </div></span>
 						<div></div>
 					</div>
 					<h1 id="Tarifs" > Tarifs </h1>
-					Semaine moyenne saison à 550 €<br/>
+					Semaine moyenne saison à <?php echo $week; ?> €<br/>
 
-					Nuitée Moyenne saison à 85 €<br/>
+					Nuitée Moyenne saison à <?php echo $night; ?> €<br/>
 
-					Semaine haute saison à 650 €<br/>
+					Semaine haute saison à <?php echo $week_high; ?> €<br/>
 
-					Nuitée haute saison à 110 €<br/>
+					Nuitée haute saison à <?php echo $night_high; ?> €<br/>
 					<h1> Moyen de paiement </h1>
 					<ul>
 						<li> Cheque </li>
@@ -99,7 +103,7 @@
 			<div>
 				<h1 id="Localisation" class="ancres"> Localisation </h1>
 				<div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45571.61785354719!2d2.4521229965790443!3d44.4490344683737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b28229b9ad4bb3%3A0x53e8b9991335fc4d!2s140%20Figuies%2C%2012330%20Salles-la-Source!5e0!3m2!1sfr!2sfr!4v1696322224607!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-				<div class="align_center"> Adresse : 140 rue de Figuiès, 12330 Salles-la-Source </div>
+				<div class="align_center"> Adresse : <?php echo $address; ?>, <?php echo $postcode; ?> <?php echo $city; ?> </div>
 			</div>
 			‎ 
 		</div>   
@@ -108,13 +112,13 @@
 		<footer>
 			<h1 id="Contact" class="white"> Contact : </h1>
 			<div>
-				<h3> Tel : 05 65 76 89 01</h3>
-				<h3> mail :  gitefigiues@gmail.com</h3>
+				<h3> Tel : <?php echo $phone; ?></h3>
+				<h3> mail :  <?php echo $mail; ?></h3>
 			</div>
 			
-			<div> <img src="img/facebook.png" /> mon facebook</div>
-			<div> <img src="img/twitter.png" /> @monTwitter</div>
-			<div> <img src="img/instagram.png" /> @monInsta</div>
+			<div> <img src="img/facebook.png" /> <?php echo $mail; ?></div>
+			<div> <img src="img/twitter.png" /> <?php echo $mail; ?></div>
+			<div> <img src="img/instagram.png" /> <?php echo $mail; ?></div>
 			
 		</footer>
 
