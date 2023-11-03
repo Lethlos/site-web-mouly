@@ -57,7 +57,7 @@ if(isset($_POST["submit"])){
             $imageSize = convert_filesize($_FILES["image"]["size"]); 
             
             // Compress size and upload image 
-            $compressedImage = compressImage($imageTemp, $imageUploadPath, 75); 
+            $compressedImage = compressImage($imageTemp, $imageUploadPath, 1); 
             
             if($compressedImage){ 
                 $compressedImageSize = filesize($compressedImage); 
@@ -65,7 +65,7 @@ if(isset($_POST["submit"])){
                 
                 $status = 'success'; 
                 $statusMsg = "Image compressed successfully."; 
-                upload_image();
+                upload_image($compressedImage);
                 header("Location: edition_page.php");
                 exit;
 
@@ -107,7 +107,7 @@ function resize_image() {
 }
 
 
-function upload_image() {
+function upload_image($image) {
     // Include the database configuration file  
     require_once 'dbConfig.php'; 
 
@@ -121,7 +121,6 @@ function upload_image() {
             // Allow certain file formats 
             $allowTypes = array('jpg','png','jpeg','gif'); 
             if(in_array($fileType, $allowTypes)){ 
-                $image = $_FILES['image']['tmp_name']; 
                 $imgContent = addslashes(file_get_contents($image)); 
              
                 // Insert image content into database 
