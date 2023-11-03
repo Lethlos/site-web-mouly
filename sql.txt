@@ -1,6 +1,6 @@
-create database IF NOT EXISTS gite;
+create or replace database gite;
 
-CREATE TABLE if not exists `images` (
+CREATE or replace TABLE `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `image` longblob NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
@@ -8,7 +8,7 @@ CREATE TABLE if not exists `images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-CREATE TABLE if not exists `information` (
+CREATE or replace TABLE `information` (
   `id` int(11) NOT NULL,
   
   `description` varchar(20000),
@@ -37,7 +37,7 @@ CREATE TABLE if not exists `information` (
 
 
 CREATE or replace TABLE `services` (
-  `id` varchar(10) not null,
+  `id` int not null,
   `name` varchar(255) NOT NULL,
   `enabled` varchar(10),
 
@@ -47,20 +47,20 @@ CREATE or replace TABLE `services` (
 
 insert into `services` (id, name, enabled) VALUES
 
-("serv1", "Petit-déjeuner", ""),
-("serv2", "Service de ménage", ""),
-("serv3", "Literie comprise", ""),
-("serv4", "Restauration à proximité", ""),
-("serv5", "Wi-Fi", ""),
-("serv6", "Parking", ""),
-("serv7", "Jardin ou espace extérieur", ""),
-("serv8", "Animaux de compagnie autorisés", ""),
-("serv9", "Fumeurs autorisés", ""),
-("serv10", "Vélos à disposition", ""),
-("serv11", "Équipements pour les enfants", ""),
-("serv12", "Activités de loisirs à proximité", ""),
-("serv13", "Transports en communs à proximité", ""),
-("serv14", "Accès handicapés", ""),
-("serv15", "Climatisation", ""),
-("serv16", "cuisine équipée", ""),
-("serv17", "Vidéo-surveillance ", "")
+(1, "Petit-déjeuner", ""),
+(2, "Service de ménage", ""),
+(3, "Literie comprise", ""),
+(4, "Restauration à proximité", ""),
+(5, "Wi-Fi", ""),
+(6, "Parking", ""),
+(7, "Jardin ou espace extérieur", ""),
+(8, "Animaux de compagnie autorisés", ""),
+(9, "Fumeurs autorisés", ""),
+(10, "Vélos à disposition", ""),
+(11, "Équipements pour les enfants", ""),
+(12, "Activités de loisirs à proximité", ""),
+(13, "Transports en communs à proximité", ""),
+(14, "Accès handicapés", ""),
+(15, "Climatisation", ""),
+(16, "cuisine équipée", ""),
+(17, "Vidéo-surveillance ", "")
