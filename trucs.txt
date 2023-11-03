@@ -114,7 +114,7 @@ travail à finir :
 - login (et delete le bouton de login du coup)
 - vérifier l'écoconception
 - refactor/clean du code
-
+- faire un lien cliquable pour le mail / le téléphone
 
 
   a ajouter dans httpd.conf : 

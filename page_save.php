@@ -36,11 +36,11 @@ $insert = $db->query("INSERT into information (id, description, bed, place, bedr
 
 #table services
 
-$services_count = $db->query("select name from services");
+$services_count = $db->query("select * from services");
 $max_serv = mysqli_num_rows($services_count);
 $count = 1;
 $service_name = "";
-while ($count < $max_serv) {
+while ($count <= $max_serv) {
     if (isset($_POST["serv".$count])) {
         $service_checked = "checked";
 
@@ -65,12 +65,12 @@ if($insert){
 
 #table payments
 
-$payments_count = $db->query("select name from payments");
+$payments_count = $db->query("select * from payments");
 $max_payments = mysqli_num_rows($payments_count);
 $count = 1;
 $payment_name = "";
-while ($count < $max_payments) {
-    if (isset($_POST["serv".$count])) {
+while ($count <= $max_payments) {
+    if (isset($_POST["payment".$count])) {
         $payment_checked = "checked";
 
     } else {
