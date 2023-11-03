@@ -62,7 +62,34 @@ if($insert){
     $statusMsg = "File upload failed, please try again."; 
 }
 
+
 #table payments
+
+$payments_count = $db->query("select name from payments");
+$max_payments = mysqli_num_rows($payments_count);
+$count = 1;
+$payment_name = "";
+while ($count < $max_payments) {
+    if (isset($_POST["serv".$count])) {
+        $payment_checked = "checked";
+
+    } else {
+        $payment_checked = "";
+    }
+    $payment_id = $count;
+    $get_name = $db->query("select name from payments where id = '".$payment_id."'");
+    $payment_name = $get_name->fetch_assoc()["name"];
+
+    $insert = $db->query("update payments set enabled = '".$payment_checked."' where id='".$payment_id."';");
+    $count++;
+}
+
+if($insert){ 
+    $status = 'success'; 
+    $statusMsg = "File uploaded successfully."; 
+}else{ 
+    $statusMsg = "File upload failed, please try again."; 
+}
 
 echo $statusMsg;
 
