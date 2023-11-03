@@ -54,10 +54,10 @@ Changer htt1 par http2 :
 
     # 1. Support for HTTP on http://127.0.0.40/
     <VirtualHost 127.0.0.40:80>
-        DocumentRoot "C:/xampp/htdocs/web-mouly"
+        DocumentRoot "C:/xampp/htdocs/site-web-mouly"
         DirectoryIndex index.html
       Protocols h2 h2c http/1.1
-        <Directory "C:/xampp/htdocs/web-mouly">
+        <Directory "C:/xampp/htdocs/site-web-mouly">
             AllowOverride None
             Order Allow,Deny
             Allow from All
@@ -65,13 +65,13 @@ Changer htt1 par http2 :
     </VirtualHost>
     # 2. Support for HTTPS on https://127.0.0.40/
     <VirtualHost 127.0.0.40:443>
-        DocumentRoot "C:/xampp/htdocs/web-mouly"
+        DocumentRoot "C:/xampp/htdocs/site-web-mouly"
       Protocols h2 h2c http/1.1
-        ServerName web-mouly
+        ServerName site-web-mouly
         SSLEngine on
         SSLCertificateFile "conf/ssl.crt/server.crt"
         SSLCertificateKeyFile "conf/ssl.key/server.key"
-        <Directory "C:/xampp/htdocs/web-mouly">
+        <Directory "C:/xampp/htdocs/site-web-mouly">
             Options All
           AllowOverride All
           Require all granted
@@ -79,7 +79,7 @@ Changer htt1 par http2 :
     </VirtualHost>
 
 - Redemarrer le serveur
-- Accéder au site par l'url https://127.0.0.40/index.html
+- Accéder au site par l'url https://127.0.0.40/index.php
 
 https://meet.google.com/tja-jchr-pcm
 
