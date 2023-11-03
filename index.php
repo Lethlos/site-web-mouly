@@ -43,7 +43,7 @@
 		</header>
 		<div class="flex_row_center">
 		<div class="content">
-		<p class="firstSentence "> Et si on préparait votre prochaine escale dans le Rouerge ?</p>
+		<p id="Photos" class="firstSentence ancres"> Et si on préparait votre prochaine escale dans le Rouerge ?</p>
 		<!-- Conteneur principal de tout le diaporama -->
 		<div class="flex_division_diapo">
 			<div> </div>
@@ -76,12 +76,12 @@
 				<div>
 					<h1 id="Capacité" class="ancres"> Capacités </h1>
 					<div class="flex_row"> 
-						<span> <div class="flex_row"> <img src="img/bed_icon.svg" width="60 px"/> Lit : <?php echo $bed; ?></div></span>
-						<span> <div class="flex_row"> <img src="img/place_icon.svg" width="60 px"/> Place : <?php echo $place; ?> </div></span>
-						<span> <div class="flex_row"> <img src="img/room_icon.svg" width="60 px"/> Chambre : <?php echo $bedroom; ?> </div></span>
+						<span> <div class="flex_row"> <img src="img/bed_icon.png" width="60 px"/> Lit : <?php echo $bed; ?></div></span>
+						<span> <div class="flex_row"> <img src="img/place_icon.png" width="60 px"/> Place : <?php echo $place; ?> </div></span>
+						<span> <div class="flex_row"> <img src="img/room_icon.png" width="60 px"/> Chambre : <?php echo $bedroom; ?> </div></span>
 						<div></div>
 					</div>
-					<h1 id="Tarifs" > Tarifs </h1>
+					<h1 id="Tarifs" class="ancres"> Tarifs </h1>
 					Semaine moyenne saison à <?php echo $week; ?> €<br/>
 
 					Nuitée Moyenne saison à <?php echo $night; ?> €<br/>
