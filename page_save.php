@@ -43,9 +43,11 @@ while ($_POST["serv".$count] != null) {
     }
     $service_id = "serv".$count;
     echo $service_name;
-    $service_name = $db->query("select name from services where id = ".$service_id."");
+    $get_name = $db->query("select name from services where id = '".$service_id."'");
+    $service_name = $get_name->fetch_assoc()["name"];
+
     echo $service_name;
-    $insert = $db->query("update services set enabled = ".$service_checked." where id=".$service_id.";");
+    $insert = $db->query("update services set enabled = '".$service_checked."' where id='".$service_id."';");
     $count++;
 }
 

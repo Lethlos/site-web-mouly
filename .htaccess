@@ -2,4 +2,4 @@ RewriteEngine On
 RewriteBase /
 
 # Rediriger /edition_page.php vers /login.php
-RewriteRule ^edition_page.php$ login.php [L]
+#RewriteRule ^edition_page.php$ login.php [L]
