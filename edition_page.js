@@ -1,9 +1,16 @@
 var errCP = "";
 
 document.addEventListener("DOMContentLoaded", function () {
+
     const inputBed = document.getElementById("inputBed");
     const inputPlace = document.getElementById("inputPlace"); 
     const inputRoom = document.getElementById("inputRoom");
+    
+
+    const dateDropdown = document.getElementById("dateDropdown");
+
+    const inputStartAddDate = document.getElementById("inputStartAddDate");
+    const inputEndAddDate = document.getElementById("inputEndAddDate");
 
     const inputPriceWeek = document.getElementById("inputPriceWeek");
     const inputPriceNight = document.getElementById("inputPriceNight"); 
@@ -19,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputFacebook = document.getElementById("inputFacebook")
 
     const boutonEnvoi = document.getElementById("boutonEnvoi");
+
 
     inputBed.addEventListener("input", justNumber);
     inputPlace.addEventListener("input", justNumber);
@@ -43,6 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     boutonEnvoi.addEventListener("click", SaveDocument);
     
+    inputStartAddDate.addEventListener("change", hideAddDateError);
+    inputEndAddDate.addEventListener("change", hideAddDateError);
+    dateDropdown.addEventListener("change", hideDelDateError);
+
+    reservations.forEach(reservation => {
+      const option = document.createElement("option");
+      option.value = reservation.start;
+      option.textContent = reservation.start;
+      dateDropdown.appendChild(option);
+    });
+
   });
 
 
@@ -226,3 +245,14 @@ function testValidMail(e) {
 
     errInput.textContent = messageError;
 }
+
+function hideAddDateError(e) {
+  const errInput = document.getElementById("errSelectedAddDate");
+  errInput.textContent = "";
+}
+
+function hideDelDateError(e) {
+  const errInput = document.getElementById("errSelectedDelDate");
+  errInput.textContent = "";
+}
+ 

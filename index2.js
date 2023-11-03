@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Affichez le calendrier
     calendar.render();
-
+    
     // On récupère le conteneur principal du diaporama
     const diapo = document.querySelector(".diapo");
 

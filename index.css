@@ -54,7 +54,7 @@
 
 body{
 	background-color: #f0f0f0;
-	background-image:url('./img/background2.webp');
+	background-image:url('./img/background.png');
 	background-size: 100dw;
 	margin: 0;
 }
@@ -81,6 +81,8 @@ footer {
 	color : #3a3a3a;
 	font-size : 200%;
 	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 
@@ -97,8 +99,8 @@ footer {
 .flex_col {
   display: flex;
   flex-direction: column;
-	align-items: right;
-	justify-content : space_between;
+  align-items: right;
+  justify-content : space_between;
 }
 
 .flex_division {
@@ -144,6 +146,12 @@ h2 {
 	font-family: 'Nothing You Could Do', cursive;
 	font-size: 40;
 }
+
+.white2 {
+	color: white;
+	font-size: 40;
+}
+
 
 .align_center {
 	text-align: center;
@@ -309,11 +317,15 @@ input {
 	margin-left: 5%;
 }
 
+.DispoDiv {
+	margin-left: 5%;
+}
+
 #calendar {
 	width: 100%;
-	margin: 0 auto;
-	height: 700px;
-	height: 50%;
+	margin: 0;
+	height: 600px;
+	max-width: 600px;
   }
 
   #calendar h2 {
@@ -337,3 +349,64 @@ input {
 	padding: 1%;
   }
 
+/* Médias requêtes pour les écrans de petite taille (tablettes et téléphones) */
+@media (max-width: 1260px) {
+	.responsive_decalage {
+		margin-top: 130px; /* Ajoutez le padding désiré pour les h1 */
+	}
+	#Contact {
+		display: none;
+	}
+}
+
+.datePicker {
+	width: 130px;
+}
+
+input {
+	margin-top : 2px;
+	margin-bottom: 2px;
+}
+
+.margin_bottom {
+	margin-bottom: 40px;
+}
+
+/* Gestion popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup input {
+    width: 100px;
+	margin: 2px;
+	margin-bottom: 10px;
+}
+
+.popup h2 {
+	margin-top : 0;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    z-index: -1;
+}

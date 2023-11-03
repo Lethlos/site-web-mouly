@@ -1,4 +1,8 @@
-CREATE TABLE `images` (
+create or replace database gite;
+
+use gite;
+
+CREATE or replace TABLE `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `image` longblob NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
@@ -6,7 +10,7 @@ CREATE TABLE `images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-CREATE TABLE `information` (
+CREATE or replace TABLE `information` (
   `id` int(11) NOT NULL,
   
   `description` varchar(20000),
@@ -32,3 +36,48 @@ CREATE TABLE `information` (
   
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+CREATE or replace TABLE `services` (
+  `id` int not null,
+  `name` varchar(255) NOT NULL,
+  `enabled` varchar(10),
+
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+insert into `services` (id, name, enabled) VALUES
+
+(1, "Petit-déjeuner", ""),
+(2, "Service de ménage", ""),
+(3, "Literie comprise", ""),
+(4, "Restauration à proximité", ""),
+(5, "Wi-Fi", ""),
+(6, "Parking", ""),
+(7, "Jardin ou espace extérieur", ""),
+(8, "Animaux de compagnie autorisés", ""),
+(9, "Fumeurs autorisés", ""),
+(10, "Vélos à disposition", ""),
+(11, "Équipements pour les enfants", ""),
+(12, "Activités de loisirs à proximité", ""),
+(13, "Transports en communs à proximité", ""),
+(14, "Accès handicapés", ""),
+(15, "Climatisation", ""),
+(16, "cuisine équipée", ""),
+(17, "Vidéo-surveillance ", "");
+
+CREATE or replace TABLE `payments` (
+  `id` int not null,
+  `name` varchar(255) NOT NULL,
+  `enabled` varchar(10),
+
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+insert into `payments` (id, name, enabled) VALUES
+
+(1, "Cheque", ""),
+(2, "Espece", ""),
+(3, "Virement", "")
