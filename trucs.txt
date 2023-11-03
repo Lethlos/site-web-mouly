@@ -103,16 +103,17 @@ Changement eco-responsable :
 - vérifier que le gite est bien libre
 - faire une demande de réservation
 
+regarder le poid d'utilisateur lambda après utilisation de ces trucs
+
+
 travail à finir :
-- enregistrer toutes les données et les importer dans les pages
-- suppression des images
+- enregistrer toutes les données et les importer dans les pages - VVVVVVVVVVVVV
+- suppression des images 
 - calendrier (back)
 - responsive
 - login (et delete le bouton de login du coup)
 - vérifier l'écoconception
 - refactor/clean du code
-
-regarder le poid d'utilisateur lambda après utilisation de ces trucs
 
 
 
