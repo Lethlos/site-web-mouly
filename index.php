@@ -116,8 +116,8 @@
 			</div>
 			
 			<div> <img src="img/facebook.png" /> <?php echo $facebook; ?></div>
-			<div> <img src="img/twitter.png" /> <?php echo $X; ?></div>
-			<div> <img src="img/instagram.png" /> <?php echo $intagram; ?></div>
+			<div> <img src="img/twitter.png" /> <?php echo $x; ?></div>
+			<div> <img src="img/instagram.png" /> <?php echo $instagram; ?></div>
 			
 		</footer>
 		
