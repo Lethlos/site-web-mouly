@@ -115,9 +115,9 @@
 				<h3> mail :  <?php echo $mail; ?></h3>
 			</div>
 			
-			<div> <img src="img/facebook.png" /> <?php echo $mail; ?></div>
-			<div> <img src="img/twitter.png" /> <?php echo $mail; ?></div>
-			<div> <img src="img/instagram.png" /> <?php echo $mail; ?></div>
+			<div> <img src="img/facebook.png" /> <?php echo $facebook; ?></div>
+			<div> <img src="img/twitter.png" /> <?php echo $x; ?></div>
+			<div> <img src="img/instagram.png" /> <?php echo $instagram; ?></div>
 			
 		</footer>
 

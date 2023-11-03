@@ -1,9 +1,11 @@
 <?php
 
-require_once 'dbConfig.php'; 
+require_once 'dbConfig.php';
 
 $statusMsg = ''; 
 $status = 'error'; 
+
+#table information
 
 $id = 1;
 
@@ -32,21 +34,23 @@ $instagram = $_POST['inputInsta'];
 $delete = $db->query("DELETE from information");
 $insert = $db->query("INSERT into information (id, description, bed, place, bedroom, week, night, week_high, night_high, address, postcode, city, phone, mail, facebook, x, instagram) VALUES ('$id', '$description', '$bed', '$place', '$bedroom', '$week', '$night', '$week_high', '$night_high', '$address', '$postcode', '$city', '$phone', '$mail', '$facebook', '$x', '$instagram')"); 
 
+#table services
+
+$services_count = $db->query("select name from services");
+$max_serv = mysqli_num_rows($services_count);
 $count = 1;
 $service_name = "";
-while ($_POST["serv".$count] != null) {
+while ($count < $max_serv) {
     if (isset($_POST["serv".$count])) {
         $service_checked = "checked";
 
     } else {
         $service_checked = "";
     }
-    $service_id = "serv".$count;
-    echo $service_name;
+    $service_id = $count;
     $get_name = $db->query("select name from services where id = '".$service_id."'");
     $service_name = $get_name->fetch_assoc()["name"];
 
-    echo $service_name;
     $insert = $db->query("update services set enabled = '".$service_checked."' where id='".$service_id."';");
     $count++;
 }
@@ -57,6 +61,8 @@ if($insert){
 }else{ 
     $statusMsg = "File upload failed, please try again."; 
 }
+
+#table payments
 
 echo $statusMsg;
 

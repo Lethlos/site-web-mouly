@@ -63,8 +63,8 @@ function import_services_admin($db) {
             $service_id = $row["id"];
             $service_name = $row["name"];
             $service_checked = $row["enabled"];
-            echo "<span> <input type=\"checkbox\" id=\"".$service_id."\" name=\"".$service_id."\" ".$service_checked." /> 
-            <label id=\"servlabel".$count."\" name=\"servlabel".$count."\" for=\"".$service_id."\">".$service_name."</label> </span>";
+            echo "<span> <input type=\"checkbox\" id=\"serv".$service_id."\" name=\"serv".$service_id."\" ".$service_checked." /> 
+            <label id=\"servlabel".$count."\" name=\"servlabel".$count."\" for=\"serv".$service_id."\">".$service_name."</label> </span>";
             $count++;
         }
     }
