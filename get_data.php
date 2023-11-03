@@ -84,4 +84,11 @@ function import_services_customer($db) {
     }
 }
 
+function import_payments_admin($db) {
+
+}
+
+function import_payments_customer($db) {
+    
+}
 ?>
