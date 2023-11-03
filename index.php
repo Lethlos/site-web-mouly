@@ -39,7 +39,7 @@
 				<b class="element-separator">|</b>
 				<div><a href="#Disponibilité">Disponibilités</a></div>
 				<b class="element-separator">|</b>
-				<div><a href="#Contact">Contact</a></div>
+				<div><a href="#Footer">Contact</a></div>
 			</nav>
 		</header>
 		<div class="flex_row_center">
@@ -109,7 +109,7 @@
 		</div>   
 		</div>
 		</div>
-		<footer>
+		<footer id="Footer">
 			<h1 id="Contact" class="white"> Contact : </h1>
 			<div>
 				<h3> Tel : <?php echo $phone; ?></h3>
