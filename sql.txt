@@ -63,7 +63,7 @@ insert into `services` (id, name, enabled) VALUES
 (14, "Accès handicapés", ""),
 (15, "Climatisation", ""),
 (16, "cuisine équipée", ""),
-(17, "Vidéo-surveillance ", "")
+(17, "Vidéo-surveillance ", "");
 
 CREATE or replace TABLE `payments` (
   `id` int not null,
