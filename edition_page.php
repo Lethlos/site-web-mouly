@@ -134,18 +134,9 @@
 				</div>
 				<h1> Moyen de paiement </h1>
 				<div class="flex_col">
-					<span>
-						<input type="checkbox" id="Espece_accepte" name="Espece_accepte" checked />
-						<label for="Espece_accepte">Espece</label>
-					</span>
-					<span>
-						<input type="checkbox" id="Cheque_accepte" name="Cheque_accepte" checked />
-						<label for="Cheque_accepte">Cheque</label>	
-					</span>
-					<span>
-						<input type="checkbox" id="Virement_accepte" name="Virement_accepte" checked />
-						<label for="Virement_accepte">Virement</label>
-					</span>
+					<?php
+						import_payments_admin($db);
+					?>
 				</div>
 				
 				<h1> Localisation </h1>

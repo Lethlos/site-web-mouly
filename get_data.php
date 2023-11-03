@@ -85,10 +85,34 @@ function import_services_customer($db) {
 }
 
 function import_payments_admin($db) {
-
+    $payment_name = "";
+    $payment_checked = "";
+    
+    $payments = $db->query("SELECT * FROM payments");
+    if ($payments != null) {
+        $count = 1;
+        while ($row = $payments->fetch_array()) {
+            $payment_id = $row["id"];
+            $payment_name = $row["name"];
+            $payment_checked = $row["enabled"];
+            echo "<span> <input type=\"checkbox\" id=\"payment".$payment_id."\" name=\"payment".$payment_id."\" ".$payment_checked." /> 
+            <label id=\"paymentlabel".$count."\" name=\"paymentlabel".$count."\" for=\"payment".$payment_id."\">".$payment_name."</label> </span>";
+            $count++;
+        }
+    }
 }
 
 function import_payments_customer($db) {
-    
+    $payment_name = "";
+
+    $payments = $db->query("SELECT * FROM payments");
+    if ($payments != null) {
+        while ($row = $payments->fetch_array()) {
+            if ($row["enabled"] == "checked") {
+                $payment_name = $row["name"];
+                echo "<li> ".$payment_name." </li>";
+            }
+        }
+    }
 }
 ?>

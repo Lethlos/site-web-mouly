@@ -64,3 +64,18 @@ insert into `services` (id, name, enabled) VALUES
 (15, "Climatisation", ""),
 (16, "cuisine équipée", ""),
 (17, "Vidéo-surveillance ", "")
+
+CREATE or replace TABLE `payments` (
+  `id` int not null,
+  `name` varchar(255) NOT NULL,
+  `enabled` varchar(10),
+
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+insert into `payments` (id, name, enabled) VALUES
+
+(1, "Cheque", ""),
+(2, "Espece", ""),
+(3, "Virement", "")

@@ -69,7 +69,7 @@
 					<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
 					<ul>
 					<?php
-					import_services_customer($db);;
+						import_services_customer($db);;
 					?>
 					</ul>
 				</div>
@@ -91,9 +91,9 @@
 					Nuitée haute saison à <?php echo $night_high; ?> €<br/>
 					<h1> Moyen de paiement </h1>
 					<ul>
-						<li> Cheque </li>
-						<li> Espece </li>
-						<li> Virement </li>
+						<?php
+							import_payments_customer($db);
+						?>
 					</ul>
 					<h1 id="Disponibilité" class="ancres"> Disponibilité </h1>
 					<div id="calendar"></div>
