@@ -43,10 +43,7 @@
 		</header>
 		<div class="flex_row_center">
 		<div class="content">
-		<div class="firstSentence ">
-			<p class="firstSentence "> Et si on préparait votre prochaine escale...</p>
-			<p class="firstSentence ">... dans le Rouerge ? </p>
-		</div>
+		<p class="firstSentence "> Et si on préparait votre prochaine escale dans le Rouerge ?</p>
 		<!-- Conteneur principal de tout le diaporama -->
 		<div class="flex_division_diapo">
 			<div> </div>
