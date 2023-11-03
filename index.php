@@ -23,7 +23,7 @@
 			<div class = "header-title">
 				<img class="logo" src="img/LOGO-figuies.png" height=100px/>
 				<h1 class="white"> GITE DE FIGUIES </h1>
-				<button id="login">Sign in</button>
+				<p>‎ </p>
 			</div>
 			<nav class="header-menu">
 				<div><a href="#Photos">Photos</a></div>
@@ -43,7 +43,10 @@
 		</header>
 		<div class="flex_row_center">
 		<div class="content">
-		<p class="firstSentence"> Et si on préparait votre prochaine escale dans le Rouerge ? </p>
+		<div class="firstSentence ">
+			<p class="firstSentence "> Et si on préparait votre prochaine escale...</p>
+			<p class="firstSentence ">... dans le Rouerge ? </p>
+		</div>
 		<!-- Conteneur principal de tout le diaporama -->
 		<div class="flex_division_diapo">
 			<div> </div>
@@ -116,10 +119,11 @@
 			</div>
 			
 			<div> <img src="img/facebook.png" /> <?php echo $facebook; ?></div>
-			<div> <img src="img/twitter.png" /> <?php echo $x; ?></div>
-			<div> <img src="img/instagram.png" /> <?php echo $instagram; ?></div>
+			<div> <img src="img/twitter.png" /> <?php echo $X; ?></div>
+			<div> <img src="img/instagram.png" /> <?php echo $intagram; ?></div>
 			
 		</footer>
+		
 
 <script src="index2.js"></script>
 	</body>

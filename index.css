@@ -145,6 +145,12 @@ h2 {
 	font-size: 40;
 }
 
+.white2 {
+	color: white;
+	font-size: 40;
+}
+
+
 .align_center {
 	text-align: center;
 	padding : 2%;
@@ -401,4 +407,12 @@ input {
     height: 100%;
     background-color: rgba(255, 255, 255);
     z-index: -1;
+}
+
+.image-background-menu {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+	height: 87%;
 }
