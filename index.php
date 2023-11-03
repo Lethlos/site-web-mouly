@@ -8,6 +8,7 @@
 	<head>
 		<title>Gite de Figuiès</title>
 		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" type="text/css" href="index.css" media="print">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
