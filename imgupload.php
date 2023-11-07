@@ -113,7 +113,7 @@ function upload_image($image) {
 
     if(isset($_POST["submit"])){ 
         $status = 'error'; 
-        if(!empty($_FILES["image"]["name"])) { 
+        if(!empty($image)) { 
             // Get file info 
             $fileName = basename($_FILES["image"]["name"]); 
             $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
