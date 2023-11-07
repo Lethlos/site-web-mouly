@@ -110,11 +110,10 @@ travail à finir :
 - suppression des images 
 - calendrier (back)
 - responsive
-- login (et delete le bouton de login du coup)
-- vérifier l'écoconception
-- refactor/clean du code
+- login (back)
 - faire un lien cliquable pour le mail / le téléphone
-- ajax pour l'ajout de photos / partout ou c'est nécessaire
+- ajax pour l'ajout de photos
+- refactor/clean du code
 
 
   a ajouter dans httpd.conf : 
