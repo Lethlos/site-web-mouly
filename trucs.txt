@@ -110,9 +110,7 @@ travail à finir :
 - calendrier (back)
 - login (back)
 - responsive
-- faire un lien cliquable pour le mail / le téléphone
 - ajax pour l'ajout de photos
-- num telephone
 - refactor/clean du code
 
   a ajouter dans httpd.conf : 

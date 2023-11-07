@@ -40,6 +40,23 @@ function slidePrev(){
     elements.style.transform = `translateX(${decal}px)`;
 }
 
+function load_calendar(xhr){
+    if (xhr.status === 200) {
+        const data = xhr.response;
+        const calendar = new FullCalendar.Calendar(calendarElement, {
+        initialView: "dayGridMonth",
+        events: data.map(reservation => ({
+            title: "Réservation",
+            start: reservation.start,
+            end: reservation.end
+        })),
+        });
+        calendar.render();
+    } else {
+        console.error('Erreur lors de la récupération des données :', xhr.statusText);
+    }
+}
+
 // Simuler des données de calendrier (remplacez ceci par les données de votre base de données)
 const reservations = [
     { start: "2023-11-05", end: "2023-11-10" },
@@ -54,18 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const calendarElement = document.getElementById("calendar");
 
-    // Initialisez le calendrier FullCalendar
-    const calendar = new FullCalendar.Calendar(calendarElement, {
-      initialView: "dayGridMonth", // Vue par défaut du calendrier (mois)
-      events: reservations.map((reservation) => ({
-        title: "Réservation",
-        start: reservation.start,
-        end: reservation.end,
-      })),
-    });
-  
-    // Affichez le calendrier
-    calendar.render();
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'get_calendar.php', true);
+    xhr.responseType = 'json';
+
+    xhr.onload = load_calendar(xhr);
     
     // On récupère le conteneur principal du diaporama
     const diapo = document.querySelector(".diapo");
