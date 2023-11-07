@@ -107,7 +107,6 @@ regarder le poid d'utilisateur lambda après utilisation de ces trucs
 
 
 travail à finir :
-- enregistrer toutes les données et les importer dans les pages - VVVVVVVVVVVVV
 - suppression des images 
 - calendrier (back)
 - responsive
@@ -115,6 +114,7 @@ travail à finir :
 - vérifier l'écoconception
 - refactor/clean du code
 - faire un lien cliquable pour le mail / le téléphone
+- ajax pour l'ajout de photos / partout ou c'est nécessaire
 
 
   a ajouter dans httpd.conf : 
