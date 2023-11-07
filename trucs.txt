@@ -112,9 +112,8 @@ travail à finir :
 - responsive
 - faire un lien cliquable pour le mail / le téléphone
 - ajax pour l'ajout de photos
+- num telephone
 - refactor/clean du code
-- textarea
-
 
   a ajouter dans httpd.conf : 
 
