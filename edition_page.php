@@ -41,28 +41,11 @@
 					</div>
 				</form>
 				<br/>
-				<form action="deleteImg.php" method="post" enctype="multipart/form-data">
+				<form action="imgdelete.php" method="post" enctype="multipart/form-data">
 					<div class="flex_col">
-						<span>
-							<input type="checkbox" id="img1" name="img1"  />
-							<label for="img1">image 1</label>
-						</span>
-						<span>
-							<input type="checkbox" id="img2" name="img2"  />
-							<label for="img2">image 2</label>
-						</span>
-						<span>
-							<input type="checkbox" id="img3" name="img3"  />
-							<label for="img3">image 3</label>
-						</span>
-						<span>
-							<input type="checkbox" id="img4" name="img4"  />
-							<label for="img4">image 4</label>
-						</span>
-						<span>
-							<input type="checkbox" id="img5" name="img5"  />	
-							<label for="img5">image 5</label>
-						</span>
+						<?php
+							include 'view_imgdelete.php';
+						?>
 					</div>
 					<input style="width: 175px;" type="submit" name="submit" value="Supprimer la selection">
 				</form>

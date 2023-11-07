@@ -107,13 +107,13 @@ regarder le poid d'utilisateur lambda après utilisation de ces trucs
 
 
 travail à finir :
-- suppression des images 
 - calendrier (back)
-- responsive
 - login (back)
+- responsive
 - faire un lien cliquable pour le mail / le téléphone
 - ajax pour l'ajout de photos
 - refactor/clean du code
+- textarea
 
 
   a ajouter dans httpd.conf : 
