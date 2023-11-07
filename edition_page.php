@@ -68,9 +68,7 @@
 				</div>
 			</div>
 			<form id="form_envoi" action="page_save.php" method="post">
-				<textarea id="msg" name="user_message" placeholder="Description du gite">
-					<?php echo $description; ?>
-				</textarea>
+				<textarea id="msg" name="user_message" placeholder="Description du gite"><?php echo htmlspecialchars($description); ?></textarea>
 				<h1 id="Equipement-services" class="ancres"> Équipement et services </h1>
 				<div class="flex_col">
 					<?php
