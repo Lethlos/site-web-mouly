@@ -112,8 +112,8 @@
 		<footer id="Footer">
 			<h1 id="Contact" class="white"> Contact : </h1>
 			<div>
-				<h3> Tel : <?php echo $phone; ?></h3>
-				<h3> mail :  <?php echo $mail; ?></h3>
+				<h3 id="phone-number">Tel : <?php echo $phone; ?></h3>
+				<h3 id="mail-adress">Mail :  <?php echo $mail; ?></h3>
 			</div>
 			
 			<div> <img src="img/facebook.png" /> <?php echo $facebook; ?></div>
