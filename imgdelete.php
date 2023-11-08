@@ -10,6 +10,8 @@ if($result->num_rows > 0){
             $id = $row['id'];
             if (isset($_POST["img".$id])) {
                 $delete_img = $db->query("delete from images where id='".$id."'");
+                header("Location: edition_page.php");
+                exit;
             }
         }
     }

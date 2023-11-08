@@ -10,11 +10,13 @@
 	
 	<body>
 		<header class = "header">
+		<form action="signOut.php" method="post" enctype="multipart/form-data">
 			<div class = "header-title">
 				<img class="logo" src="img/LOGO-figuies.png" height=100px/>
 				<h1 class="white"> GITE DE FIGUIES </h1>
 				<button id="login">Sign out</button>
 			</div>
+		</form>
 
             <!-- Popup de login -->
             <div class="popup" id="loginPopup">
