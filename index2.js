@@ -42,10 +42,11 @@ function slidePrev(){
 
 function load_calendar(xhr){
     if (xhr.status === 200) {
-        const data = xhr.response;
+        const reservationsData = JSON.parse(xmlhttp.responsText);
+        console.log(reservationsData);
         const calendar = new FullCalendar.Calendar(calendarElement, {
         initialView: "dayGridMonth",
-        events: data.map(reservation => ({
+        events: reservationsData.map(reservation => ({
             title: "Réservation",
             start: reservation.start,
             end: reservation.end
@@ -69,11 +70,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const calendarElement = document.getElementById("calendar");
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'get_calendar.php', true);
-    xhr.responseType = 'json';
+    const xmlhttp = new XMLHttpRequest();
 
-    xhr.onload = load_calendar(xhr);
+    xmlhttp.onreadystatechange = function() {
+        if (xhr.status === 200) {
+            const reservationsData = JSON.parse(xmlhttp.responsText);
+            console.log(reservationsData);
+            const calendar = new FullCalendar.Calendar(calendarElement, {
+            initialView: "dayGridMonth",
+            events: reservationsData.map(reservation => ({
+                title: "Réservation",
+                start: reservation.start,
+                end: reservation.end
+            })),
+            });
+            calendar.render();
+        }
+    }
+
+    xmlhttp.open('GET', 'Controllers/AgendaController.php', true);
+    xmlhttp.send();
     
     // On récupère le conteneur principal du diaporama
     const diapo = document.querySelector(".diapo");
