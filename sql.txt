@@ -90,6 +90,6 @@ CREATE or replace TABLE `login` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-insert into `payments` (username, password) VALUES
+insert into `login` (username, password) VALUES
 
 ("admin", "$2y$10$wIcnEBqY79bxfolBwMtFJ.D40Da2HBQ75Sg3HBelmbn8HzL8iWIB.");

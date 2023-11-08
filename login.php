@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once 'dbConfig.php';
 
 if (isset($_POST['submit'])) {
@@ -15,25 +15,19 @@ if (isset($_POST['submit'])) {
                 $pwHash = $row['password'];
                 if ($username === $username_db) {
                     if (password_verify($password, $pwHash)) {
+                        $_SESSION['isUserAuthenticated'] = 'true';
+                        echo $_SESSION['isUserAuthenticated'];
                         header('Location: edition_page.php');
                         exit;
                     }
                     else {
 
                     }
+                } else {
+
                 }
             }
         }
-    }
-
-    // Vérifiez si le login et le mot de passe correspondent à "admin".
-    if ($username === 'admin' && $password === 'admin') {
-        // Redirigez l'utilisateur vers "edition_page.php".
-        header('Location: edition_page.php');
-        exit;
-    } else {
-        // Si les identifiants ne correspondent pas, affichez un message d'erreur ou effectuez une autre action.
-        echo "Login incorrect. Veuillez réessayer.";
     }
 }
 ?>
