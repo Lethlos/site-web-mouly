@@ -73,22 +73,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
-        if (xhr.status === 200) {
-            const reservationsData = JSON.parse(xmlhttp.responsText);
+        if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+            const reservationsData = JSON.parse(xmlhttp.responseText);
             console.log(reservationsData);
             const calendar = new FullCalendar.Calendar(calendarElement, {
-            initialView: "dayGridMonth",
-            events: reservationsData.map(reservation => ({
-                title: "Réservation",
-                start: reservation.start,
-                end: reservation.end
-            })),
+                initialView: "dayGridMonth",
+                events: reservationsData.map(reservation => ({
+                    title: "Réservation",
+                    start: reservation.start,
+                    end: reservation.end
+                })),
             });
             calendar.render();
         }
     }
 
-    xmlhttp.open('GET', 'Controllers/AgendaController.php', true);
+    xmlhttp.open('GET', 'get_calendar.php', true);
     xmlhttp.send();
     
     // On récupère le conteneur principal du diaporama
