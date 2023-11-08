@@ -82,7 +82,7 @@ if(isset($_POST["submit"])){
 echo $statusMsg;
 
 function resize_image() {
-    $maxDim = 800;
+    $maxDim = 792;
     $file_name = $_FILES["image"]["tmp_name"];
     list($width, $height) = getimagesize( $file_name );
     if ( $width > $maxDim ) {
