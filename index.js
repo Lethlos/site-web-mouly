@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     let tel = document.getElementById("phone-number");
     let mail = document.getElementById("mail-adress");
+    let tel2 = document.getElementById("phone-number-resp");
+    let mail2 = document.getElementById("mail-adress-resp");
+    tel2.addEventListener("click", function () {
+        copy(tel2.textContent.trim().replace("Tel : ", ''));
+    });
+    mail2.addEventListener("click", function () {
+        copy(mail2.textContent.trim().replace("Mail : ", ''));
+    });
     tel.addEventListener("click", function () {
         copy(tel.textContent.trim().replace("Tel : ", ''));
     });
