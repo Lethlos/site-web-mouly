@@ -108,9 +108,8 @@ regarder le poid d'utilisateur lambda après utilisation de ces trucs
 
 travail à finir :
 - calendrier (back)
-- login (back)
 - responsive
-- ajax pour l'ajout de photos
+- ajax pour le calendrier
 - refactor/clean du code
 
 
