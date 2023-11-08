@@ -2,6 +2,7 @@
 <html>
 
 <?php 
+	include 'verify.php';
 	include 'get_data.php';
 ?>
 
