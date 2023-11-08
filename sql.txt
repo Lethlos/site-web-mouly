@@ -80,4 +80,12 @@ insert into `payments` (id, name, enabled) VALUES
 
 (1, "Cheque", ""),
 (2, "Espece", ""),
-(3, "Virement", "")
+(3, "Virement", "");
+
+CREATE or replace TABLE `login` (
+  `id` int AUTO_INCREMENT not null,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) not null,
+
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

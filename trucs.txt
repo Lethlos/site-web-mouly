@@ -113,6 +113,11 @@ travail à finir :
 - ajax pour l'ajout de photos
 - refactor/clean du code
 
+
+    $hash = password_hash($password, PASSWORD_BCRYPT);
+
+    $db->query("INSERT into login (username, password) values ('".$username."', '".$hash."')");
+
   a ajouter dans httpd.conf : 
 
   
