@@ -26,7 +26,7 @@
 				<h1 class="white"> GITE DE FIGUIES </h1>
 				<p>‎ </p>
 			</div>
-			<nav class="header-menu">
+			<nav id="header-menu" class="header-menu">
 				<div><a href="#Photos">Photos</a></div>
 				<b class="element-separator">|</b>
 				<div><a href="#Equipement-services">Équipement et services</a></div>
@@ -102,11 +102,21 @@
 			</div>
 			<div class="responsive_decalage">
 				<h1 id="Localisation" class="ancres"> Localisation </h1>
-				<div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45571.61785354719!2d2.4521229965790443!3d44.4490344683737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b28229b9ad4bb3%3A0x53e8b9991335fc4d!2s140%20Figuies%2C%2012330%20Salles-la-Source!5e0!3m2!1sfr!2sfr!4v1696322224607!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+				<div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45571.61785354719!2d2.4521229965790443!3d44.4490344683737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b28229b9ad4bb3%3A0x53e8b9991335fc4d!2s140%20Figuies%2C%2012330%20Salles-la-Source!5e0!3m2!1sfr!2sfr!4v1696322224607!5m2!1sfr!2sfr" width="600" id="map" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 				<div class="align_center"> Adresse : <?php echo $address; ?>, <?php echo $postcode; ?> <?php echo $city; ?> </div>
 			</div>
 			‎ 
-		</div>   
+		</div>
+		<div id="Responsive-Footer">
+			<h1  class="ancres"> Contact : </h1>
+			<div class="flex_col">
+				<div id="phone-number-resp">Tel : <?php echo $phone; ?></div>
+				<div id="mail-adress-resp">Mail :  <?php echo $mail; ?></div>
+				<div> <img src="img/facebook.png" /> <?php echo $facebook; ?></div>
+				<div> <img src="img/twitter.png" /> <?php echo $x; ?></div>
+				<div> <img src="img/instagram.png" /> <?php echo $instagram; ?></div>
+				</div>
+			</div> 
 		</div>
 		</div>
 		<footer id="Footer">

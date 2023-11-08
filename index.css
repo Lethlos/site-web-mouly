@@ -357,6 +357,32 @@ input {
 	#Contact {
 		display: none;
 	}
+	#Footer {
+		display: none;
+	}
+	#header-menu {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.responsive_decalage {
+		width: 100%; /* Ajoutez le padding désiré pour les h1 */
+	}
+	#map {
+		max-width: 100%;
+	}
+
+	.content {
+		width: 100%;
+	}
+}
+
+/* Médias requêtes pour les écrans de grande taille (tablettes et téléphones) */
+@media (min-width: 1260px) {
+	#Responsive-Footer {
+		display: none;
+	}
 }
 
 .datePicker {
