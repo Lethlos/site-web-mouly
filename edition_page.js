@@ -92,15 +92,15 @@ function loadEditionPageCalendar() {
               initialView: "dayGridMonth",
               events: reservationsData.map(reservation => ({
                   title: "Réservation",
-                  start: reservation.start,
-                  end: reservation.end
+                  start: reservation[0],
+                  end: reservation[1]
               })),
           });
           calendar.render();
           reservationsData.forEach(reservation => {
             const option = document.createElement("option");
-            option.value = reservation.start;
-            option.textContent = reservation.start;
+            option.value = reservation[0];
+            option.textContent = reservation[0];
             dateDropdown.appendChild(option);
           });
       }
