@@ -147,14 +147,13 @@
 						Du <input type="date" class="datePicker" id="inputStartAddDate" name="selectedDate"></input>
 						Au <input type="date" class="datePicker" id="inputEndAddDate" name="selectedDate"></input>
 						<input style="width: 175px;" type="button"  id="submitReservation" name="submitReservation" value="Valider"></input>
-						<span id="errSelectedAddDate" class="errMessage">* Veuillez choisir un interval valide</span>
+						<span id="errSelectedAddDate" class="errMessage"></span>
 						</p>
 
 						<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
 						<select id="dateDropdown">
 						</select>
 						<input style="width: 175px;" type="button" id="submitDeleteReservation" name="submitDeleteReservation" value="Supprimer"></input>
-						<span id="errSelectedDelDate" class="errMessage">* Veuillez choisir une date</span>
 						</p>
 					</div>
 					<div id="calendar"></div>

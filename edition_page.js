@@ -5,13 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputBed = document.getElementById("inputBed");
     const inputPlace = document.getElementById("inputPlace"); 
     const inputRoom = document.getElementById("inputRoom");
-    const dateDropdown1 = document.getElementById("dateDropdown");
     
     const submitDeleteReservation = document.getElementById("submitDeleteReservation");
     const submitReservation = document.getElementById("submitReservation");
 
-    const inputStartAddDate = document.getElementById("inputStartAddDate");
-    const inputEndAddDate = document.getElementById("inputEndAddDate");
 
     const inputPriceWeek = document.getElementById("inputPriceWeek");
     const inputPriceNight = document.getElementById("inputPriceNight"); 
@@ -51,10 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     inputFacebook.addEventListener("blur", testValidFacebook);
 
     boutonEnvoi.addEventListener("click", SaveDocument);
-    
-    inputStartAddDate.addEventListener("change", hideAddDateError);
-    inputEndAddDate.addEventListener("change", hideAddDateError);
-    dateDropdown1.addEventListener("change", hideDelDateError);
+  
 
     submitDeleteReservation.addEventListener("click", deleteReservation);
     submitReservation.addEventListener("click", addReservation);
@@ -87,14 +81,20 @@ function deleteReservation() {
 function addReservation() {
   const inputStartAddDate = document.getElementById("inputStartAddDate");
   const inputEndAddDate = document.getElementById("inputEndAddDate");
+  const errSelectedAddDate = document.getElementById("errSelectedAddDate");
   const inputStartAddDateValue = inputStartAddDate.value;
   const inputEndAddDateValue = inputEndAddDate.value;
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
-        console.log(xmlhttp.responseText);
-        loadEditionPageCalendar();
-        alert("Reservation ajoutée à la base de données")
+        if(xmlhttp.responseText == 1) {
+          loadEditionPageCalendar();
+          alert("Reservation ajoutée à la base de données");
+        } else if(xmlhttp.responseText == 0) {
+          errSelectedAddDate.value = "* Créneau déjà réservé, veuillez en choisir un autre";
+        } else {
+          errSelectedAddDate.value = "* Veuillez choisir un interval valide";
+        }
       }
   }
   xmlhttp.open('GET', 'add_calendar.php?start=' + inputStartAddDateValue +"&end=" + inputEndAddDateValue, true);
@@ -116,7 +116,7 @@ function loadEditionPageCalendar() {
               events: reservationsData.map(reservation => ({
                   title: "Réservation",
                   start: reservation[0],
-                  end: reservation[1]
+                  end: dateSuivante(reservation[1])
               })),
           });
           calendar.render();
@@ -132,6 +132,22 @@ function loadEditionPageCalendar() {
   xmlhttp.open('GET', 'get_calendar.php', true);
   xmlhttp.send();
 }
+
+
+function dateSuivante(dateString) {
+  var date = new Date(dateString);
+
+  date.setDate(date.getDate() + 1);
+
+  var annee = date.getFullYear();
+  var mois = (date.getMonth() + 1).toString().padStart(2, '0'); // Les mois sont indexés à partir de 0
+  var jour = date.getDate().toString().padStart(2, '0');
+
+  var dateSuivanteString = `${annee}-${mois}-${jour}`;
+
+  return dateSuivanteString;
+}
+
 
 /**
  * Enregistre le document avec toutes les informations écrites
@@ -316,11 +332,6 @@ function testValidMail(e) {
 
 function hideAddDateError(e) {
   const errInput = document.getElementById("errSelectedAddDate");
-  errInput.textContent = "";
-}
-
-function hideDelDateError(e) {
-  const errInput = document.getElementById("errSelectedDelDate");
   errInput.textContent = "";
 }
  
