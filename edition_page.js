@@ -55,12 +55,34 @@ document.addEventListener("DOMContentLoaded", function () {
     inputEndAddDate.addEventListener("change", hideAddDateError);
     dateDropdown.addEventListener("change", hideDelDateError);
 
-    reservations.forEach(reservation => {
-      const option = document.createElement("option");
-      option.value = reservation.start;
-      option.textContent = reservation.start;
-      dateDropdown.appendChild(option);
-    });
+    const calendarElement = document.getElementById("calendar");
+
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+            const reservationsData = JSON.parse(xmlhttp.responseText);
+            console.log(reservationsData);
+            const calendar = new FullCalendar.Calendar(calendarElement, {
+                initialView: "dayGridMonth",
+                events: reservationsData.map(reservation => ({
+                    title: "Réservation",
+                    start: reservation.start,
+                    end: reservation.end
+                })),
+            });
+            calendar.render();
+            reservationsData.forEach(reservation => {
+              const option = document.createElement("option");
+              option.value = reservation.start;
+              option.textContent = reservation.start;
+              dateDropdown.appendChild(option);
+            });
+        }
+    }
+
+    xmlhttp.open('GET', 'get_calendar.php', true);
+    xmlhttp.send();
 
   });
 
@@ -181,7 +203,7 @@ function justInsta(e) {
 
     // Vérifier si la valeur commence par '@'
     if (!inputValue.startsWith('@')) {
-      inputValue = '@' + inputValue;
+      inputValue = '@' + inputValue;  
     }
 
     // Mettre à jour la valeur de l'input

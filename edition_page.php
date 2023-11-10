@@ -152,9 +152,6 @@
 
 						<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
 						<select id="dateDropdown">
-							<!-- Remplir la liste déroulante avec les dates de début à partir du tableau reservations -->
-							<option value="">Sélectionnez une date</option>
-							<!-- Boucle pour ajouter les options à partir du tableau de réservations -->
 						</select>
 						<input style="width: 175px;" type="submit" name="submitDeleteReservation" value="Supprimer"></input>
 						<span id="errSelectedDelDate" class="errMessage">* Veuillez choisir une date</span>
