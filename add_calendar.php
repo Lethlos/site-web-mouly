@@ -2,11 +2,11 @@
 
 require_once 'dbConfig.php'; 
 
-$start = (isset($_GET["start"])) ? new DateTime($_GET["start"]) : NULL;
-$end = (isset($_GET["end"])) ? new DateTime($_GET["end"]) : NULL;
+$start = (isset($_GET["start"]) && $_GET["start"] != "") ? new DateTime($_GET["start"]) : NULL;
+$end = (isset($_GET["end"]) && $_GET["end"] != "") ? new DateTime($_GET["end"]) : NULL;
 
-if ($start && $end) {
-    if ($start < $end) {
+if (($start && $end)) {
+    if ($start <= $end) {
         $reservations = $db->query("SELECT * FROM calendar");
         $available = true;
         while ($row = $reservations->fetch_array()) {
