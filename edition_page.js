@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dateDropdown1 = document.getElementById("dateDropdown");
     
     const submitDeleteReservation = document.getElementById("submitDeleteReservation");
+    const submitReservation = document.getElementById("submitReservation");
 
     const inputStartAddDate = document.getElementById("inputStartAddDate");
     const inputEndAddDate = document.getElementById("inputEndAddDate");
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dateDropdown1.addEventListener("change", hideDelDateError);
 
     submitDeleteReservation.addEventListener("click", deleteReservation);
+    submitReservation.addEventListener("click", addReservation);
 
     loadEditionPageCalendar();
 
@@ -72,9 +74,29 @@ function deleteReservation() {
   xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
         loadEditionPageCalendar();
+        alert("Reservation supprimée de la base de données")
       }
   }
   xmlhttp.open('GET', 'delete_calendar.php?start=' + reservSelected, true);
+  xmlhttp.send();
+}
+
+/**
+ * Supprime la réservation
+ */
+function addReservation() {
+  const inputStartAddDate = document.getElementById("inputStartAddDate");
+  const inputEndAddDate = document.getElementById("inputEndAddDate");
+  const inputStartAddDateValue = inputStartAddDate.value;
+  const inputEndAddDateValue = inputEndAddDate.value;
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+        loadEditionPageCalendar();
+        alert("Reservation ajoutée à la base de données")
+      }
+  }
+  xmlhttp.open('GET', 'add_calendar.php?start=' + inputStartAddDateValue +"&end=" + inputEndAddDateValue, true);
   xmlhttp.send();
 }
 
