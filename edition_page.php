@@ -196,7 +196,7 @@
 		</div>
 	</div>			‎
 	<footer>
-		<div> <button id="boutonAnnulerEnvoi"> Annuler les modifications </button> </div>
+		<div> ‎ </div>
 		<div> <button id="boutonEnvoi"> Enregistrer les modifications </button> </div>		
 	</footer>
 	

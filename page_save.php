@@ -32,7 +32,7 @@ $instagram = $_POST['inputInsta'];
 
 
 $delete = $db->query("DELETE from information");
-$insert = $db->query("INSERT into information (id, description, bed, place, bedroom, week, night, week_high, night_high, address, postcode, city, phone, mail, facebook, x, instagram) VALUES ('$id', '$description', '$bed', '$place', '$bedroom', '$week', '$night', '$week_high', '$night_high', '$address', '$postcode', '$city', '$phone', '$mail', '$facebook', '$x', '$instagram')"); 
+$insert = $db->query("INSERT into information (id, description, bed, place, bedroom, week, night, week_high, night_high, address, postcode, city, phone, mail, facebook, x, instagram) VALUES (\"$id\", \"$description\", \"$bed\", \"$place\", \"$bedroom\", \"$week\", \"$night\", \"$week_high\", \"$night_high\", \"$address\", \"$postcode\", \"$city\", \"$phone\", \"$mail\", \"$facebook\", \"$x\", \"$instagram\")"); 
 
 #table services
 
@@ -92,6 +92,7 @@ if($insert){
 }
 
 echo $statusMsg;
+header('Location: edition_page.php');
+exit;
 
 ?>
-

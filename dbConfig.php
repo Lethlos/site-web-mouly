@@ -1,9 +1,9 @@
 <?php  
 // Database configuration  
-$dbHost     = "localhost";  
-$dbUsername = "root";  
-$dbPassword = "";  
-$dbName     = "gite";  
+$dbHost     = "mysql-site-web-mouly.alwaysdata.net";  
+$dbUsername = "335074";  
+$dbPassword = "gite-3il";  
+$dbName     = "site-web-mouly_gite";  
   
 // Create database connection  
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);  
