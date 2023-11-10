@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputBed = document.getElementById("inputBed");
     const inputPlace = document.getElementById("inputPlace"); 
     const inputRoom = document.getElementById("inputRoom");
+    const dateDropdown1 = document.getElementById("dateDropdown");
     
-
-    const dateDropdown = document.getElementById("dateDropdown");
+    const submitReservation = document.getElementById("submitReservation");
 
     const inputStartAddDate = document.getElementById("inputStartAddDate");
     const inputEndAddDate = document.getElementById("inputEndAddDate");
@@ -53,39 +53,62 @@ document.addEventListener("DOMContentLoaded", function () {
     
     inputStartAddDate.addEventListener("change", hideAddDateError);
     inputEndAddDate.addEventListener("change", hideAddDateError);
-    dateDropdown.addEventListener("change", hideDelDateError);
+    dateDropdown1.addEventListener("change", hideDelDateError);
 
-    const calendarElement = document.getElementById("calendar");
+    submitReservation.addEventListener("click", deleteReservation);
 
-    const xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
-            const reservationsData = JSON.parse(xmlhttp.responseText);
-            console.log(reservationsData);
-            const calendar = new FullCalendar.Calendar(calendarElement, {
-                initialView: "dayGridMonth",
-                events: reservationsData.map(reservation => ({
-                    title: "Réservation",
-                    start: reservation.start,
-                    end: reservation.end
-                })),
-            });
-            calendar.render();
-            reservationsData.forEach(reservation => {
-              const option = document.createElement("option");
-              option.value = reservation.start;
-              option.textContent = reservation.start;
-              dateDropdown.appendChild(option);
-            });
-        }
-    }
-
-    xmlhttp.open('GET', 'get_calendar.php', true);
-    xmlhttp.send();
+    loadEditionPageCalendar();
 
   });
 
+
+/**
+ * Supprime la réservation
+ */
+function deleteReservation() {
+  const dateDropdown = document.getElementById("dateDropdown");
+  const reservSelected = dateDropdown.value;
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+        loadEditionPageCalendar();
+      }
+  }
+  xmlhttp.open('GET', 'delete_calendar.php?start=' + reservSelected, true);
+  xmlhttp.send();
+}
+
+function loadEditionPageCalendar() {
+
+  const calendarElement = document.getElementById("calendar");
+  const dateDropdown = document.getElementById("dateDropdown");
+  const xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
+          const reservationsData = JSON.parse(xmlhttp.responseText);
+          console.log(reservationsData);
+          const calendar = new FullCalendar.Calendar(calendarElement, {
+              initialView: "dayGridMonth",
+              events: reservationsData.map(reservation => ({
+                  title: "Réservation",
+                  start: reservation.start,
+                  end: reservation.end
+              })),
+          });
+          calendar.render();
+          reservationsData.forEach(reservation => {
+            const option = document.createElement("option");
+            option.value = reservation.start;
+            option.textContent = reservation.start;
+            dateDropdown.appendChild(option);
+          });
+      }
+  }
+
+  xmlhttp.open('GET', 'get_calendar.php', true);
+  xmlhttp.send();
+}
 
 /**
  * Enregistre le document avec toutes les informations écrites
