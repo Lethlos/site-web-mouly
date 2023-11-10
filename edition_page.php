@@ -153,7 +153,7 @@
 						<label for="dateDropdown">Supprimer la réserveration débuttant le : </label>
 						<select id="dateDropdown">
 						</select>
-						<input style="width: 175px;" type="button" name="submitDeleteReservation" value="Supprimer"></input>
+						<input style="width: 175px;" type="button" id="submitDeleteReservation" name="submitDeleteReservation" value="Supprimer"></input>
 						<span id="errSelectedDelDate" class="errMessage">* Veuillez choisir une date</span>
 						</p>
 					</div>

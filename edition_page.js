@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputRoom = document.getElementById("inputRoom");
     const dateDropdown1 = document.getElementById("dateDropdown");
     
-    const submitReservation = document.getElementById("submitReservation");
+    const submitDeleteReservation = document.getElementById("submitDeleteReservation");
 
     const inputStartAddDate = document.getElementById("inputStartAddDate");
     const inputEndAddDate = document.getElementById("inputEndAddDate");
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     inputEndAddDate.addEventListener("change", hideAddDateError);
     dateDropdown1.addEventListener("change", hideDelDateError);
 
-    submitReservation.addEventListener("click", deleteReservation);
+    submitDeleteReservation.addEventListener("click", deleteReservation);
 
     loadEditionPageCalendar();
 
@@ -82,6 +82,7 @@ function loadEditionPageCalendar() {
 
   const calendarElement = document.getElementById("calendar");
   const dateDropdown = document.getElementById("dateDropdown");
+  dateDropdown.innerHTML = '';
   const xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function() {
