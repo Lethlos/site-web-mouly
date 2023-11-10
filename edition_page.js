@@ -91,9 +91,9 @@ function addReservation() {
           loadEditionPageCalendar();
           alert("Reservation ajoutée à la base de données");
         } else if(xmlhttp.responseText == 0) {
-          errSelectedAddDate.value = "* Créneau déjà réservé, veuillez en choisir un autre";
+          errSelectedAddDate.textContent = "* Créneau déjà réservé, veuillez en choisir un autre";
         } else {
-          errSelectedAddDate.value = "* Veuillez choisir un interval valide";
+          errSelectedAddDate.textContent = "* Veuillez choisir un interval valide";
         }
       }
   }
