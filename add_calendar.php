@@ -22,5 +22,8 @@ if ($start && $end) {
         $result = $db->query("insert into `calendar` (start, end) VALUES ('".$startstr."', '".$endstr."');");
     }
 }
+else {
+    $available = false;
+}
 echo $available;
 ?>
