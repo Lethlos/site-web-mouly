@@ -93,3 +93,17 @@ CREATE or replace TABLE `login` (
 insert into `login` (username, password) VALUES
 
 ("admin", "$2y$10$wIcnEBqY79bxfolBwMtFJ.D40Da2HBQ75Sg3HBelmbn8HzL8iWIB.");
+
+CREATE or replace TABLE `calendar` (
+  `id` int AUTO_INCREMENT not null,
+  `start` date NOT NULL,
+  `end` date not null,
+
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+insert into `calendar` (start, end) VALUES
+
+('2023-11-05', '2023-11-10'),
+('2023-11-15', '2023-11-20'),
+('2023-11-22', '2023-11-23');
