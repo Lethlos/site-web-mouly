@@ -40,31 +40,6 @@ function slidePrev(){
     elements.style.transform = `translateX(${decal}px)`;
 }
 
-function load_calendar(xhr){
-    if (xhr.status === 200) {
-        const reservationsData = JSON.parse(xmlhttp.responsText);
-        console.log(reservationsData);
-        const calendar = new FullCalendar.Calendar(calendarElement, {
-        initialView: "dayGridMonth",
-        events: reservationsData.map(reservation => ({
-            title: "Réservation",
-            start: reservation.start,
-            end: reservation.end
-        })),
-        });
-        calendar.render();
-    }
-}
-
-// Simuler des données de calendrier (remplacez ceci par les données de votre base de données)
-const reservations = [
-    { start: "2023-11-05", end: "2023-11-10" },
-    { start: "2023-11-15", end: "2023-11-20" },
-    // Ajoutez d'autres réservations ici
-  ];
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     

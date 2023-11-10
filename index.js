@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 initialView: "dayGridMonth",
                 events: reservationsData.map(reservation => ({
                     title: "Réservation",
-                    start: reservation.start,
-                    end: reservation.end
+                    start: reservation[0],
+                    end: reservation[1]
                 })),
             });
             calendar.render();
