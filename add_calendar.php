@@ -21,9 +21,14 @@ if ($start && $end) {
         $endstr = $end->format('Y-m-d');
         $result = $db->query("insert into `calendar` (start, end) VALUES ('".$startstr."', '".$endstr."');");
     }
+    echo $available;
 }
 else {
-    $available = false;
+    if ($start > $end) {
+        echo 2;
+    }
+    else {
+        echo 0;
+    }
 }
-echo $available;
 ?>
