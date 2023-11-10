@@ -82,7 +82,7 @@ function deleteReservation() {
 }
 
 /**
- * Supprime la réservation
+ * Ajoute une réservation
  */
 function addReservation() {
   const inputStartAddDate = document.getElementById("inputStartAddDate");
@@ -110,7 +110,6 @@ function loadEditionPageCalendar() {
   xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status === 200) {
           const reservationsData = JSON.parse(xmlhttp.responseText);
-          console.log(reservationsData);
           const calendar = new FullCalendar.Calendar(calendarElement, {
               initialView: "dayGridMonth",
               events: reservationsData.map(reservation => ({
